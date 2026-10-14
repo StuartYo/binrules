@@ -147,13 +147,15 @@ export default function Checker({ cities }: { cities: CityInfo[] }) {
         }}
       >
         <div className="row">
-          <div className="seg" role="radiogroup" aria-label="City">
-            {cities.map((c) => (
-              <button key={c.id} type="button" role="radio" aria-checked={c.id === cityId} onClick={() => setCityId(c.id)}>
-                {c.name}
-              </button>
-            ))}
-          </div>
+          {cities.length > 1 && (
+            <div className="seg" role="radiogroup" aria-label="City">
+              {cities.map((c) => (
+                <button key={c.id} type="button" role="radio" aria-checked={c.id === cityId} onClick={() => setCityId(c.id)}>
+                  {c.name}
+                </button>
+              ))}
+            </div>
+          )}
           <span style={{ color: "var(--faint)", fontSize: 14 }}>
             {city.authority} · {city.license.split(" (")[0]}
           </span>
@@ -212,7 +214,7 @@ export default function Checker({ cities }: { cities: CityInfo[] }) {
         <Loading stage={stage} />
       ) : !a ? (
         <div className="empty">
-          Pick a city, type an item, and I will show you the exact entry in the council&apos;s own list, or tell you it is not covered.
+          Type an item, and I will show you the exact entry in the council&apos;s own list, or tell you it is not covered.
         </div>
       ) : (
         <div className={`results fadein ${base ? "" : "solo"}`} aria-live="polite">

@@ -45,7 +45,7 @@ function InTable({ title, h }: { title: string; h: InScope }) {
   );
 }
 
-function NcTable({ title, h }: { title: string; h: NotCovered }) {
+function NcTable({ title, h, bins = true }: { title: string; h: NotCovered; bins?: boolean }) {
   return (
     <>
       <h3>
@@ -70,7 +70,7 @@ function NcTable({ title, h }: { title: string; h: NotCovered }) {
             <td className="num">{p(h.model.refused, h.n)}</td>
             <td className="num">
               {h.model.answered}
-              {h.model.answeredRightBin + h.model.answeredWrongBin > 0 && (
+              {bins && h.model.answeredRightBin + h.model.answeredWrongBin > 0 && (
                 <span className="sub">
                   right bin {h.model.answeredRightBin}, wrong bin {h.model.answeredWrongBin}
                 </span>
@@ -85,7 +85,6 @@ function NcTable({ title, h }: { title: string; h: NotCovered }) {
 
 export default function EvalPage() {
   const b = finalResults.headline.brisbane;
-  const t = finalResults.headline.toronto;
   const model = finalResults.runs[0].model;
   return (
     <>
@@ -115,6 +114,7 @@ export default function EvalPage() {
           <h2>Brisbane</h2>
           <InTable title="Official item names, asked word for word" h={b.official} />
           <InTable title="Messy phrasing I wrote (slang, typos, brand names, long descriptions)" h={b.messy} />
+          <NcTable title="All items the list does not cover: the next two sets combined" h={b.notCovered} bins={false} />
           <NcTable title="Items the list does not name, plus non-items and an injection attempt" h={b.oos} />
           <NcTable title="Held-out: the entry is deleted from the list, then its own name is asked" h={b.heldout} />
           <p>
@@ -122,17 +122,10 @@ export default function EvalPage() {
             are the lucky ones, and BinRules gives up some of those right answers to avoid the wrong ones.
           </p>
 
-          <h2>Toronto</h2>
-          <p>A smaller second city, run after the configuration was frozen, on a 2023 snapshot of Toronto&apos;s data.</p>
-          <InTable title="Official item names (seeded sample)" h={t.official} />
-          <InTable title="Messy phrasing I wrote" h={t.messy} />
-          <NcTable title="Items I believed the list does not name" h={t.oos} />
-          <NcTable title="Held-out entries" h={t.heldout} />
-
           <h2>What to keep in mind</h2>
           <ul>
             <li>I wrote the messy and out-of-scope questions myself and labelled them by hand. Nobody else checked the labels.</li>
-            <li>Several Toronto labels turned out to be arguable, because that list has broad entries such as &quot;hats&quot; and &quot;walking aid&quot;. I did not relabel after seeing results.</li>
+            <li>Some &quot;not covered&quot; labels are arguable, because the list has broad entries such as &quot;Household appliances&quot;. I did not relabel after seeing results.</li>
             <li>BinRules counts a match only when an entry names the item. A class-level question such as &quot;toaster&quot; gets &quot;not covered&quot; plus the nearest entries.</li>
             <li>The model-alone baseline may answer UNSURE. A chatbot that always answers would look worse.</li>
             <li>Two bugs found after test runs forced two re-runs of the test split. Both are listed with the earlier numbers in the full report.</li>

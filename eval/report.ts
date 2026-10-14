@@ -75,7 +75,7 @@ export interface Final {
   spend: { evalUsd: number; projectCapUsd: number; evalStopUsd: number };
 }
 
-const RUN_FILES = ["brisbane-test.json", "toronto-test.json"];
+const RUN_FILES = ["brisbane-test.json"];
 
 function inScope(rows: Row[], set: "official" | "messy" | "all"): InScope {
   const pick = (sys: System): SysCounts => {
@@ -144,8 +144,7 @@ export function buildFinal(): Final {
   };
   hist("dev-brisbane.json", "Dev split, final configuration", "The only split used for tuning. Final configuration, one run.");
   hist("brisbane-test-run1.json", "Brisbane test, run 1 (before the stop-word fix)", "The word 'can' was on my stop-word list, so 'Oil can' collapsed to 'Oil' and 'Cans (steel)' lost its head word. I fixed that one bug and re-ran the whole test split.");
-  hist("brisbane-test-run2.json", "Brisbane test, run 2 (before the variant fix)", "While building the demo I saw Toronto 'pizza box' answer 'food-soiled' only, because the model's own rewrites (for example 'greasy pizza box') were allowed to choose between condition variants. I changed it so only the resident's own words can choose a variant, and re-ran both cities. The numbers above are from that last run.");
-  hist("toronto-test-run1.json", "Toronto test, run 1 (before the variant fix)", "Same reason as Brisbane run 2.");
+  hist("brisbane-test-run2.json", "Brisbane test, run 2 (before the variant fix)", "While building the demo I saw an item that the list splits by condition (a pizza box, food-soiled or not) answer with one variant only, because the model's own rewrites (for example 'greasy pizza box') were allowed to choose between condition variants. I changed it so only the resident's own words can choose a variant, and re-ran the whole test split. The numbers above are from that last run.");
   let day1: Final["day1"] = null;
   if (fs.existsSync(path.join(RES, "day1-baseline-dev.json")) && fs.existsSync(path.join(RES, "day1-baseline-test.json"))) {
     const a = readRun("day1-baseline-dev.json");
@@ -230,7 +229,6 @@ function failures(rows: Row[], city: string): string {
 
 export function renderResults(f: Final): string {
   const b = f.headline["brisbane"];
-  const t = f.headline["toronto"];
   const run = f.runs.find((r) => r.city === "brisbane")!;
   const lines: string[] = [];
   lines.push("# BinRules evaluation results");
@@ -256,21 +254,6 @@ export function renderResults(f: Final): string {
   lines.push("### What went wrong in Brisbane");
   lines.push("");
   lines.push(failures(f.rows, "brisbane"));
-  if (t) {
-    lines.push("## Toronto (test split, 2023 snapshot of the Waste Wizard data)");
-    lines.push("");
-    lines.push("A smaller second city, evaluated after the configuration was frozen. The official-name question set is a seeded sample of 120 entries.");
-    lines.push("");
-    lines.push(inScopeTable(t.official, "Official names, asked word for word"));
-    lines.push(inScopeTable(t.messy, "Messy phrasing I wrote"));
-    lines.push(notCoveredTable(t.oos, "Items I believed the list does not name"));
-    lines.push(notCoveredTable(t.heldout, "Held-out entries"));
-    lines.push("### What went wrong in Toronto");
-    lines.push("");
-    lines.push(failures(f.rows, "toronto"));
-    lines.push("Reading the Toronto misses: several answers that my labels count as wrong cite a different but legitimate Toronto entry for the same item (for example \"smartphones\" for an old smartphone, \"Tim Hortons coffee cup (disposable)\" for a Tim Hortons cup), which the last column of the table forgives. Several \"not covered\" items turned out to have a broader Toronto entry that a reader could call a fair match (\"hats\", \"puzzle\", \"walking aid\", \"floor mats\", \"kitchen utensil\"). Toronto's list is also full of near-duplicate entries, so some held-out items were answered from a sibling that really is the same item (\"dog treat\" for rawhide chews, \"Sea-Doo\" for Jet Ski, \"fruit juice pouch\" for a juice drink pouch). I did not relabel anything after seeing the results.");
-    lines.push("");
-  }
   lines.push("## History and disclosures");
   lines.push("");
   for (const h of f.history) {
@@ -282,6 +265,7 @@ export function renderResults(f: Final): string {
     const d = f.day1;
     lines.push(`- **Day-one stop-loss check** (before any tuning): ${d.model} alone on all ${d.n} Brisbane official names scored ${p1(d.counts.correct, d.n)} right, ${p1(d.counts.wrong, d.n)} wrong, ${p1(d.counts.refused, d.n)} declined (files \`eval/results/day1-baseline-*.json\`). That is far below the 95% that would have made the project pointless. The headline comparison above uses Super for both systems.`);
   }
+  lines.push("- A second city, Toronto (2023 Waste Wizard snapshot), was tried during development and dropped before submission, because the City's open-data page lists the dataset's licence as \"not specified\". Its data, questions and results are not in the current files and are not reported here.");
   lines.push("- The out-of-scope labels were checked by hand against the list but not adjudicated with a second person. Broad entries (for example \"Household appliances\" or \"Hats\") make some \"not covered\" labels arguable. BinRules deliberately treats an entry as a match only when it names the item, so class-level questions get \"not covered\" plus the closest entries.");
   lines.push("- The model-alone baseline is allowed to abstain. A plain chatbot that always answers would look worse than the numbers here.");
   lines.push("- Re-running the same questions gives slightly different numbers (two runs of the Brisbane test differ by about 2 points), because the hosted model is not bit-for-bit deterministic at temperature 0.");
@@ -301,7 +285,6 @@ export function renderReadmeBlock(f: Final): string {
   const o = b.official;
   const m = b.messy;
   const n = b.notCovered;
-  const t = f.headline["toronto"];
   const L: string[] = [];
   L.push(README_START);
   L.push("Same Nemotron model on both sides, Brisbane test questions frozen before tuning:");
@@ -313,7 +296,7 @@ export function renderReadmeBlock(f: Final): string {
   L.push(`| Messy phrasing answered wrongly | ${p1(m.binrules.wrong, m.n)} | ${p1(m.model.wrong, m.n)} |`);
   L.push(`| Items the list does not cover that it refused (n = ${n.n}) | **${p1(n.binrules.refused, n.n)}** | ${p1(n.model.refused, n.n)} |`);
   L.push("");
-  if (t) L.push(`Toronto (smaller, 2023 data): official names ${p1(t.official.binrules.correct, t.official.n)} vs ${p1(t.official.model.correct, t.official.n)}; items not covered refused ${p1(t.notCovered.binrules.refused, t.notCovered.n)} vs ${p1(t.notCovered.model.refused, t.notCovered.n)}. Full tables, failures and disclosures: [eval/RESULTS.md](eval/RESULTS.md).`);
+  L.push("Full tables, failures and disclosures: [eval/RESULTS.md](eval/RESULTS.md).");
   L.push(README_END);
   return L.join("\n");
 }

@@ -50,59 +50,17 @@ Not-covered questions that BinRules answered (4): "shower curtain" -> bne-81, bn
 
 In-scope questions it declined (17): "tin of baked beans, empty", "tub of ice-cream", "cellophane wrap from a bunch of flowers", "plastic plant pot from the nursery", "tin of house paint with some paint left", "empty toothpaste tube", "old printer cartridge", "biscuit tray insert", "old bar fridge", "gas patio heater", "wax box from the fruit shop", "goon bag", "green reusable shopping bag", "empty nail polish bottle", "fibro sheet with asbestos", "laminate floor boards", "box of matches".
 
-## Toronto (test split, 2023 snapshot of the Waste Wizard data)
-
-A smaller second city, evaluated after the configuration was frozen. The official-name question set is a seeded sample of 120 entries.
-
-**Official names, asked word for word** (n = 120)
-
-| System | Right answer | Wrong answer | Declined | Bin within the official set |
-|---|---|---|---|---|
-| BinRules | 100.0% (120/120), 95% CI 97-100% | 0.0% (0) | 0.0% (0) | 100.0% |
-| Model alone | 73.3% (88/120), 95% CI 65-80% | 25.8% (31) | 0.8% (1) | 73.3% |
-
-**Messy phrasing I wrote** (n = 44)
-
-| System | Right answer | Wrong answer | Declined | Bin within the official set |
-|---|---|---|---|---|
-| BinRules | 70.5% (31/44), 95% CI 56-82% | 9.1% (4) | 20.5% (9) | 79.5% |
-| Model alone | 70.5% (31/44), 95% CI 56-82% | 29.5% (13) | 0.0% (0) | 70.5% |
-
-**Items I believed the list does not name** (n = 20)
-
-| System | Refused | Answered anyway | Of those answered: right bin / wrong bin (held-out only) |
-|---|---|---|---|
-| BinRules | 75.0% (15/20), 95% CI 53-89% | 5 | 0 / 0 |
-| Model alone | 15.0% (3/20), 95% CI 5-36% | 17 | 0 / 0 |
-
-**Held-out entries** (n = 12)
-
-| System | Refused | Answered anyway | Of those answered: right bin / wrong bin (held-out only) |
-|---|---|---|---|
-| BinRules | 58.3% (7/12), 95% CI 32-81% | 5 | 4 / 1 |
-| Model alone | 0.0% (0/12), 95% CI 0-24% | 12 | 6 / 6 |
-
-### What went wrong in Toronto
-
-In-scope questions answered with a different entry than I listed (4): "old smartphone" -> tor-A0483; "wooden pencil stubs" -> tor-A1261; "expired prescription pills" -> tor-A1741; "paper cup from Tim Hortons" -> tor-A1004.
-
-Not-covered questions that BinRules answered (10): "cheese grater" -> tor-A1160 [oos, answered]; "Rubik's cube" -> tor-A1205 [oos, answered]; "bucket hat" -> tor-A1147 [oos, answered]; "crutches" -> tor-A1256 [oos, answered]; "coir door mat" -> tor-A1930 [oos, answered]; "electric heating pad" -> tor-A1225 [heldout, answered_right_bin]; "rawhide chews" -> tor-A1371 [heldout, answered_right_bin]; "Jet Ski" -> tor-A1889 [heldout, answered_right_bin]; "audio cassette tapes" -> tor-A1828 [heldout, answered_wrong_bin]; "juice drink pouch" -> tor-A0769 [heldout, answered_right_bin].
-
-In-scope questions it declined (9): "empty jar of baby food", "old cassettes", "cotton buds for cleaning ears", "sticking plasters", "leftover crab legs", "jug of liquid bleach under the sink", "bottle of white glue", "old vitamin tablets", "fibreglass canoe from the cottage".
-
-Reading the Toronto misses: several answers that my labels count as wrong cite a different but legitimate Toronto entry for the same item (for example "smartphones" for an old smartphone, "Tim Hortons coffee cup (disposable)" for a Tim Hortons cup), which the last column of the table forgives. Several "not covered" items turned out to have a broader Toronto entry that a reader could call a fair match ("hats", "puzzle", "walking aid", "floor mats", "kitchen utensil"). Toronto's list is also full of near-duplicate entries, so some held-out items were answered from a sibling that really is the same item ("dog treat" for rawhide chews, "Sea-Doo" for Jet Ski, "fruit juice pouch" for a juice drink pouch). I did not relabel anything after seeing the results.
-
 ## History and disclosures
 
 - **Dev split, final configuration** (nvidia/nemotron-3-super-120b-a12b): official names 100.0% right; messy 93.2% right, 0.0% wrong; not covered 100.0% refused. The only split used for tuning. Final configuration, one run.
 - **Brisbane test, run 1 (before the stop-word fix)** (nvidia/nemotron-3-super-120b-a12b): official names 100.0% right; messy 88.2% right, 2.2% wrong; not covered 94.0% refused. The word 'can' was on my stop-word list, so 'Oil can' collapsed to 'Oil' and 'Cans (steel)' lost its head word. I fixed that one bug and re-ran the whole test split.
-- **Brisbane test, run 2 (before the variant fix)** (nvidia/nemotron-3-super-120b-a12b): official names 100.0% right; messy 86.8% right, 1.5% wrong; not covered 95.5% refused. While building the demo I saw Toronto 'pizza box' answer 'food-soiled' only, because the model's own rewrites (for example 'greasy pizza box') were allowed to choose between condition variants. I changed it so only the resident's own words can choose a variant, and re-ran both cities. The numbers above are from that last run.
-- **Toronto test, run 1 (before the variant fix)** (nvidia/nemotron-3-super-120b-a12b): official names 100.0% right; messy 75.0% right, 9.1% wrong; not covered 78.1% refused. Same reason as Brisbane run 2.
+- **Brisbane test, run 2 (before the variant fix)** (nvidia/nemotron-3-super-120b-a12b): official names 100.0% right; messy 86.8% right, 1.5% wrong; not covered 95.5% refused. While building the demo I saw an item that the list splits by condition (a pizza box, food-soiled or not) answer with one variant only, because the model's own rewrites (for example 'greasy pizza box') were allowed to choose between condition variants. I changed it so only the resident's own words can choose a variant, and re-ran the whole test split. The numbers above are from that last run.
 - **Day-one stop-loss check** (before any tuning): nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B alone on all 294 Brisbane official names scored 31.3% right, 26.5% wrong, 42.2% declined (files `eval/results/day1-baseline-*.json`). That is far below the 95% that would have made the project pointless. The headline comparison above uses Super for both systems.
+- A second city, Toronto (2023 Waste Wizard snapshot), was tried during development and dropped before submission, because the City's open-data page lists the dataset's licence as "not specified". Its data, questions and results are not in the current files and are not reported here.
 - The out-of-scope labels were checked by hand against the list but not adjudicated with a second person. Broad entries (for example "Household appliances" or "Hats") make some "not covered" labels arguable. BinRules deliberately treats an entry as a match only when it names the item, so class-level questions get "not covered" plus the closest entries.
 - The model-alone baseline is allowed to abstain. A plain chatbot that always answers would look worse than the numbers here.
 - Re-running the same questions gives slightly different numbers (two runs of the Brisbane test differ by about 2 points), because the hosted model is not bit-for-bit deterministic at temperature 0.
 
 ## Spend
 
-Evaluation spend to date: $1.3122 of the $2.00 project cap (evaluation stops at $1.35; the rest is reserved for the public demo). Ledger: `eval/results/spend.json`.
+Evaluation spend to date: $1.3187 of the $2.00 project cap (evaluation stops at $1.35; the rest is reserved for the public demo). Ledger: `eval/results/spend.json`.

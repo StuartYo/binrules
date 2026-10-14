@@ -13,19 +13,22 @@ export const EXAMPLES: [CityId, string][] = [
   ["brisbane", "tea bags"],
   ["brisbane", "business cards"],
   ["brisbane", "milk carton"],
+  ["brisbane", "shoes"],
   ["brisbane", "kitchen sponge"],
   ["brisbane", "bicycle helmet"],
-  ["toronto", "pizza box"],
-  ["toronto", "plastic straw"],
-  ["toronto", "kitchen sponge"],
-  ["toronto", "tea strainer"],
 ];
 
 (async () => {
   let usd = 0;
   setGuard({ after: (r) => (usd += r.costUsd) });
-  const out: Record<string, unknown> = {};
+  // Only the examples named on the command line are (re)computed; the rest of data/examples.json is kept as it is.
+  //   tsx scripts/precompute.ts            computes any example that has no saved answer yet
+  //   tsx scripts/precompute.ts --all      recomputes every example
+  const file = path.join(__dirname, "..", "data", "examples.json");
+  const out: Record<string, unknown> = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : {};
+  const all = process.argv.includes("--all");
   for (const [city, q] of EXAMPLES) {
+    if (!all && out[`${city}|${tokens(q).join(" ")}`]) continue;
     const [answer, baseline] = await Promise.all([ask(city, q), askModelAlone(city, q)]);
     out[`${city}|${tokens(q).join(" ")}`] = { answer, baseline, computed: new Date().toISOString().slice(0, 10) };
     console.log(city, q, "->", answer.status, answer.entries.map((e) => e.name).join(" / ") || "-", "| model alone:", baseline.bin);

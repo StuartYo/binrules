@@ -57,7 +57,6 @@ describe("results consistency", () => {
     expect(declined).toBeLessThan(0.15); // README: about one in eight messy questions declined
     expect(final.spend.evalUsd).toBeGreaterThan(1.3);
     expect(final.spend.evalUsd).toBeLessThan(1.35); // README: about $1.31 of the $2.00 cap
-    expect(final.headline["toronto"].official.n).toBe(120); // README: seeded sample of 120
   });
 
   it("frozen case files and the baseline prompt still match their recorded hashes", () => {

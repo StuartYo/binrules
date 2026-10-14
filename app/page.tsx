@@ -8,16 +8,15 @@ import type { CityId } from "@/lib/types";
 export const dynamic = "force-static";
 
 const CHIPS: Record<CityId, string[]> = {
-  brisbane: ["pizza box", "tea bags", "business cards", "milk carton", "kitchen sponge", "bicycle helmet"],
-  toronto: ["pizza box", "plastic straw", "kitchen sponge", "tea strainer"],
+  brisbane: ["pizza box", "tea bags", "business cards", "milk carton", "shoes", "kitchen sponge", "bicycle helmet"],
 };
-const PLACEHOLDER: Record<CityId, string> = { brisbane: "e.g. greasy box my pizza came in", toronto: "e.g. empty jar of baby food" };
+const PLACEHOLDER: Record<CityId, string> = { brisbane: "e.g. greasy box my pizza came in" };
 
 function cityInfo(id: CityId): CityInfo {
   const c = getCity(id);
   return {
     id,
-    name: id === "brisbane" ? "Brisbane" : "Toronto",
+    name: "Brisbane",
     authority: c.authority,
     councilUrl: c.source.councilUrl,
     councilName: c.source.councilName,
@@ -34,13 +33,12 @@ const pc = (k: number, n: number) => `${Math.round((100 * k) / n)}%`;
 const pc1 = (k: number, n: number) => `${((100 * k) / n).toFixed(1).replace(/\.0$/, "")}%`;
 
 export default function Home() {
-  const cities = (["brisbane", "toronto"] as CityId[]).map(cityInfo);
+  const cities = (["brisbane"] as CityId[]).map(cityInfo);
   const h = finalResults.headline.brisbane;
   const o = h.official;
   const m = h.messy;
   const n = h.notCovered;
   const bne = getCity("brisbane");
-  const tor = getCity("toronto");
 
   return (
     <>
@@ -97,9 +95,9 @@ export default function Home() {
               </div>
               <div>
                 <div className="pair">
-                  <span className="big">{pc(n.binrules.refused, n.n)}</span>
+                  <span className="big">{pc1(n.binrules.refused, n.n)}</span>
                   <span className="vs">vs</span>
-                  <span className="small">{pc(n.model.refused, n.n)}</span>
+                  <span className="small">{pc1(n.model.refused, n.n)}</span>
                 </div>
                 <p className="cap">
                   <b>Items the list does not cover, refused.</b> {n.n} questions with no official entry behind them.
@@ -140,7 +138,7 @@ export default function Home() {
 
           <section className="block">
             <h2>Where the rules come from</h2>
-            <p className="sub">Both lists are the cities&apos; own open data. Nothing here is reworded.</p>
+            <p className="sub">The list is the council&apos;s own open data. Entries are reformatted into JSON; the wording is not changed.</p>
             <div className="sources">
               <div className="srccard">
                 <h3>Brisbane, Australia</h3>
@@ -150,18 +148,11 @@ export default function Home() {
                   </a>
                 </p>
                 <p>
-                  {bne.entries.length} entries · {bne.source.license} · updated {bne.source.modified?.slice(0, 10)}
-                </p>
-              </div>
-              <div className="srccard">
-                <h3>Toronto, Canada</h3>
-                <p>
-                  <a href={tor.source.datasetUrl} target="_blank" rel="noreferrer">
-                    {tor.source.title}
+                  {bne.entries.length} entries · updated {bne.source.modified?.slice(0, 10)} ·{" "}
+                  <a href={bne.source.licenseUrl} target="_blank" rel="noreferrer">
+                    {bne.source.license}
                   </a>
-                </p>
-                <p>
-                  {tor.entries.length.toLocaleString("en-US")} entries · a 2023 snapshot, so some rules may have changed. Licence: Open Government Licence - Toronto (the dataset page does not state one).
+                  , credit Brisbane City Council
                 </p>
               </div>
             </div>
@@ -171,7 +162,7 @@ export default function Home() {
 
       <footer>
         <div className="wrap">
-          <span>An independent student project by Hua-I Yu, not affiliated with Brisbane City Council or the City of Toronto. For hazardous items, ask the council first.</span>
+          <span>An independent student project by Hua-I Yu, not affiliated with Brisbane City Council. For hazardous items, ask the council first.</span>
           <span>
             Public demo: limited checks per day, then a labelled word-for-word fallback. <Link href="/eval">Evaluation</Link> ·{" "}
             <a href="https://github.com/StuartYo/binrules" target="_blank" rel="noreferrer">

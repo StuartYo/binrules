@@ -117,7 +117,7 @@ describe("word-for-word fallback (no model)", () => {
   });
 
   it("shows every variant when the item has condition variants", () => {
-    const a = lexicalAsk("toronto", "pizza boxes");
+    const a = lexicalAsk("brisbane", "shoes");
     expect(a.status).toBe("depends");
     expect(a.entries.length).toBe(2);
   });

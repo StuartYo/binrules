@@ -1,4 +1,5 @@
-export type CityId = "brisbane" | "toronto";
+/** Cities with a normalised official list in data/<city>.json. */
+export type CityId = "brisbane";
 
 export interface BinInfo {
   label: string;

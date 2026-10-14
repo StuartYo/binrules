@@ -8,13 +8,13 @@ BinRules answers "which bin does this go in?" strictly from a city's official so
 
 - Live demo: https://binrules.vercel.app
 - Built for Arbiter Hacks V1, Rethinking Waste track. MIT licence.
-- Cities: Brisbane (294 entries, CC BY 4.0, updated 2026-07-20) and Toronto (2,206 entries, a 2023 snapshot).
+- City: Brisbane (294 official entries, CC BY 4.0, updated 2026-07-20). The code takes any city whose official list is normalised into `data/<city>.json`.
 
 ## Why this exists
 
-Sorting rules are set by each city, often by the contract with the local processing plant, so the same item goes in different bins in different places. A pizza box is a yellow-bin item in Brisbane. In Toronto it is Blue Bin if unsoiled and Green Bin if food-soiled. A model that answers from general knowledge will pick one bin with confidence and be wrong for a third of items, as the results below show.
+Sorting rules are set by each city, often by the contract with the local processing plant, so the same item goes in different bins in different places. A pizza box is a yellow-bin item in Brisbane, and elsewhere the same box can depend on whether it is food-soiled. A model that answers from general knowledge will pick one bin with confidence and be wrong for a third of items, as the results below show.
 
-Wrong-bin sorting is what contaminates recycling. In the United States the average contamination rate at the processing plant is about 17% by weight, and only about a third of communities know their own number (Recycling Partnership, 2020 Curbside Report, via Waste360). I did not measure anything about real residents. What I can measure is whether an answer is backed by the council's own entry, and that is what this project does.
+Wrong-bin sorting is what contaminates recycling. Where communities measure it, contamination at the processing plant averages about 17% by weight, and only about a third of US communities know their own number (Recycling Partnership, 2020 Curbside Report, as reported by Waste360 and Recycling Today). I did not measure anything about real residents. What I can measure is whether an answer is backed by the council's own entry, and that is what this project does.
 
 ## Results
 
@@ -30,7 +30,7 @@ Same Nemotron model on both sides, Brisbane test questions frozen before tuning:
 | Messy phrasing answered wrongly | 1.5% | 32.4% |
 | Items the list does not cover that it refused (n = 67) | **94.0%** | 4.5% |
 
-Toronto (smaller, 2023 data): official names 100.0% vs 73.3%; items not covered refused 68.8% vs 9.4%. Full tables, failures and disclosures: [eval/RESULTS.md](eval/RESULTS.md).
+Full tables, failures and disclosures: [eval/RESULTS.md](eval/RESULTS.md).
 <!-- RESULTS:END -->
 
 ## What the model does, and what it does not
@@ -64,10 +64,11 @@ When the daily budget is spent or the model is unreachable, the site switches to
 
 | City | Source | Licence | Notes |
 |---|---|---|---|
-| Brisbane | [What goes in my bin](https://data.brisbane.qld.gov.au/explore/dataset/what-goes-in-my-bin/), Brisbane City Council | CC BY 4.0 | 294 entries, modified 2026-07-20. Each answer links to the exact record. |
-| Toronto | [Waste Wizard](https://open.toronto.ca/dataset/waste-wizard-lookup-table/), City of Toronto Open Data | Open Government Licence - Toronto (the portal default; the dataset's own metadata says "licence not specified") | A 2023-11-27 snapshot, so some rules may have changed. |
+| Brisbane | [What goes in my bin](https://data.brisbane.qld.gov.au/explore/dataset/what-goes-in-my-bin/), Brisbane City Council | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 294 entries, modified 2026-07-20. Reformatted into `data/brisbane.json`; the wording is unchanged. Each answer links to the exact record. |
 
-BinRules is an independent student project and is not affiliated with either city. For hazardous items, ask the council first.
+Contains data from Brisbane City Council, used under CC BY 4.0. BinRules is an independent student project and is not affiliated with Brisbane City Council. For hazardous items, ask the council first.
+
+A second city, Toronto, was tried during development and removed before submission: the City's open-data page lists that dataset's licence as "not specified", so its data, test questions and results are not part of the current files and are not reported.
 
 ## Evaluation protocol
 
@@ -76,13 +77,13 @@ BinRules is an independent student project and is not affiliated with either cit
 - **Four kinds of question.** Official names asked word for word. Messy phrasing I wrote (slang, typos, brand names, long descriptions). Items the list does not name, plus non-items and an injection attempt. Held-out entries: the entry is deleted from the knowledge base and its own name is asked.
 - **Scoring is strict for BinRules and generous for the model.** BinRules is right only if it cites an entry I accepted. The model alone is right if its bin appears anywhere in the official entry's options.
 - **One results file.** `eval/results/final.json` holds every raw row. `npm run report` generates `eval/RESULTS.md` and the table above from it, and `tests/results.test.ts` fails if either drifts from the JSON.
-- **Disclosures.** Two bugs found after test runs forced two re-runs of the whole test split. The first-run numbers are kept in the report. The out-of-scope labels are my own and nobody else checked them; some Toronto labels turned out to be arguable.
+- **Disclosures.** Two bugs found after test runs forced two re-runs of the whole test split. The first-run numbers are kept in the report. The out-of-scope labels are my own and nobody else checked them, and broad entries such as "Household appliances" make some of them arguable.
 
 Reproduce (needs your own `NEBIUS_API_KEY`; a full Brisbane test run costs about $0.23):
 
 ```bash
 npm install
-npm test                      # 47 tests, no API calls
+npm test                      # 41 tests, no API calls
 npm run eval -- --city brisbane --split test --systems binrules,model --out eval/results/my-run.json
 npx tsx eval/show.ts eval/results/my-run.json --wrong
 ```
@@ -90,8 +91,8 @@ npx tsx eval/show.ts eval/results/my-run.json --wrong
 ## Limits
 
 - It will not answer class-level questions. "Toaster" gets "not covered" plus the nearest entries when the list only says "Household appliances". That is deliberate and it costs recall: about one in eight messy Brisbane questions was declined.
-- Two cities. Adding one means normalising its official list into `data/<city>.json`.
-- Rules change. Each answer shows the dataset's last-modified date, and the Toronto data is from 2023.
+- One city. Adding another means normalising its official list into `data/<city>.json`.
+- Rules change. Each answer shows the dataset's last-modified date.
 - I measured accuracy against the official lists, not behaviour of real residents or contamination at a plant.
 - The hosted model is not bit-for-bit deterministic at temperature 0, so re-runs differ by a couple of points.
 - The public demo's caps are per server instance, so the worst case is the daily cap times the number of instances.
@@ -102,7 +103,7 @@ Offline accuracy is all I have today. In a pilot, the number to move is plant co
 
 ## Cost
 
-Evaluation and development used about $1.31 of a $2.00 project cap on Nebius Token Factory through the final test runs (ledger in `eval/results/spend.json`; later demo and video checks add a few cents). A live check costs about $0.0005 with the comparison panel on. The public demo is capped at 150 model checks and $0.05 per day per instance.
+Evaluation and development used about $1.32 of a $2.00 project cap on Nebius Token Factory (ledger in `eval/results/spend.json`; later demo and video checks add a few cents). A live check costs about $0.0005 for BinRules alone and about $0.0006 with the comparison panel on. The public demo is capped at 150 model checks and $0.05 per day per instance.
 
 ## Method note
 

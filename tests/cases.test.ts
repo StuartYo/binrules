@@ -9,7 +9,7 @@ import type { CityId } from "../lib/types";
 
 const DIR = path.join(__dirname, "..", "eval", "cases");
 
-for (const city of ["brisbane", "toronto"] as CityId[]) {
+for (const city of ["brisbane"] as CityId[]) {
   describe(`frozen evaluation cases (${city})`, () => {
     const c = getCity(city);
     const ids = new Set(c.entries.map((e) => e.id));

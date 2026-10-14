@@ -682,109 +682,96 @@
   },
   "computed": "2026-10-14"
  },
- "toronto|pizza box": {
+ "brisbane|sho": {
   "answer": {
    "status": "depends",
-   "city": "toronto",
-   "query": "pizza box",
+   "city": "brisbane",
+   "query": "shoes",
    "entries": [
     {
-     "id": "tor-A0138",
-     "name": "pizza boxes (unsoiled)",
+     "id": "bne-225",
+     "name": "Shoes (poor condition)",
      "bins": [
       {
-       "code": "blue-bin",
-       "label": "Blue Bin",
-       "tone": "blue",
-       "description": "Recycling (Blue Bin)."
+       "code": "rrc-red",
+       "label": "Resource recovery centre, red line",
+       "tone": "red",
+       "description": "Council resource recovery centre: general waste accepted at the red lines, fees apply."
+      },
+      {
+       "code": "red-bin",
+       "label": "Red bin",
+       "tone": "red",
+       "description": "General waste kerbside bin (red lid)."
       }
      ],
-     "note": "Remove any plastic pieces and place those in the Garbage Bin. Place empty, unsoiled box in the Blue Bin.",
+     "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
      "url": null
     },
     {
-     "id": "tor-A1461",
-     "name": "pizza boxes (food-soiled)",
+     "id": "bne-226",
+     "name": "Shoes (good condition)",
      "bins": [
       {
-       "code": "green-bin",
-       "label": "Green Bin",
-       "tone": "green",
-       "description": "Organics (Green Bin)."
+       "code": "rrc-yellow",
+       "label": "Resource recovery centre, yellow line",
+       "tone": "yellow",
+       "description": "Council resource recovery centre: recyclables accepted at the yellow lines, usually free."
+      },
+      {
+       "code": "red-bin",
+       "label": "Red bin",
+       "tone": "red",
+       "description": "General waste kerbside bin (red lid)."
       }
      ],
-     "note": "Remove any plastic pieces and place those in the Garbage Bin. Place this item in the Green Bin.",
-     "url": null
+     "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Ensure batteries are removed.",
+     "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
     }
    ],
    "closest": [],
-   "reason": "\"pizza boxes\" has several official entries and the answer depends on the detail in brackets.",
+   "reason": "\"Shoes\" has several official entries and the answer depends on the detail in brackets.",
    "mode": "llm",
    "usage": {
     "calls": 4,
-    "promptTokens": 1455,
-    "completionTokens": 101,
-    "costUsd": 0.0005273999999999999
+    "promptTokens": 1176,
+    "completionTokens": 92,
+    "costUsd": 0.00043559999999999996
    },
    "trace": {
     "expansions": [
-     "pizza box",
-     "cardboard pizza container",
-     "takeout pizza box",
-     "food delivery box",
-     "pizza packaging"
+     "footwear",
+     "sneakers",
+     "boots",
+     "slippers",
+     "sandals"
     ],
     "candidates": [
      {
-      "id": "tor-A1461",
-      "name": "pizza boxes (food-soiled)",
-      "score": 12.62
+      "id": "bne-225",
+      "name": "Shoes (poor condition)",
+      "score": 6.24
      },
      {
-      "id": "tor-A0138",
-      "name": "pizza boxes (unsoiled)",
-      "score": 11.46
+      "id": "bne-226",
+      "name": "Shoes (good condition)",
+      "score": 6.24
      },
      {
-      "id": "tor-A1460",
-      "name": "pizza",
-      "score": 8.67
-     },
-     {
-      "id": "tor-A1389",
-      "name": "paper takeout fries boxes (food soiled)",
-      "score": 7.84
-     },
-     {
-      "id": "tor-A1441",
-      "name": "paper takeout burger boxes (food-soiled)",
-      "score": 7.84
-     },
-     {
-      "id": "tor-A0025",
-      "name": "cardboard boxes (unwaxed)",
-      "score": 7.33
-     },
-     {
-      "id": "tor-A1038",
-      "name": "cardboard boxes (waxed)",
-      "score": 7.33
-     },
-     {
-      "id": "tor-A0766",
-      "name": "frozen food box",
-      "score": 7
+      "id": "bne-31",
+      "name": "Boots (safety)",
+      "score": 3.45
      }
     ],
     "votes": [
      {
       "order": "by relevance",
-      "pick": "tor-A1461",
+      "pick": "bne-225",
       "variantStated": false
      },
      {
       "order": "reversed",
-      "pick": "tor-A0138",
+      "pick": "bne-226",
       "variantStated": false
      }
     ],
@@ -797,7 +784,7 @@
      {
       "name": "word evidence",
       "passed": true,
-      "detail": "shares \"pizza\", \"box\", \"food\""
+      "detail": "shares \"sho\""
      },
      {
       "name": "verification",
@@ -808,373 +795,14 @@
    }
   },
   "baseline": {
-   "bin": "Garbage Bin",
-   "binCode": "garbage",
-   "why": "Pizza boxes soiled with food/grease go in garbage; clean cardboard can be recycled.",
+   "bin": "Red bin",
+   "binCode": "red-bin",
+   "why": "Shoes cannot be recycled in standard bins; dispose of via general waste.",
    "usage": {
     "calls": 1,
-    "promptTokens": 300,
-    "completionTokens": 34,
-    "costUsd": 0.00012059999999999999
-   }
-  },
-  "computed": "2026-10-14"
- },
- "toronto|plastic straw": {
-  "answer": {
-   "status": "answer",
-   "city": "toronto",
-   "query": "plastic straw",
-   "entries": [
-    {
-     "id": "tor-A0919",
-     "name": "plastic straw",
-     "bins": [
-      {
-       "code": "garbage",
-       "label": "Garbage Bin",
-       "tone": "grey",
-       "description": "Garbage (landfill)."
-      }
-     ],
-     "note": "Place this item in the Garbage Bin.",
-     "url": null
-    }
-   ],
-   "closest": [],
-   "reason": "Matched the official entry \"plastic straw\".",
-   "mode": "llm",
-   "usage": {
-    "calls": 4,
-    "promptTokens": 1408,
-    "completionTokens": 81,
-    "costUsd": 0.0004953
-   },
-   "trace": {
-    "expansions": [
-     "straw",
-     "drinking straw",
-     "sipping tube",
-     "beverage stirrer"
-    ],
-    "candidates": [
-     {
-      "id": "tor-A0919",
-      "name": "plastic straw",
-      "score": 10.92
-     },
-     {
-      "id": "tor-A0344",
-      "name": "paper straw (with wax",
-      "score": 8.33
-     },
-     {
-      "id": "tor-A1442",
-      "name": "paper straw (without wax",
-      "score": 7.78
-     },
-     {
-      "id": "tor-A2094",
-      "name": "straw bales",
-      "score": 7.52
-     },
-     {
-      "id": "tor-A0167",
-      "name": "plastic beverage containers",
-      "score": 6.59
-     },
-     {
-      "id": "tor-A0901",
-      "name": "plastic lotion tube",
-      "score": 5.59
-     },
-     {
-      "id": "tor-A0902",
-      "name": "plastic makeup tube",
-      "score": 5.59
-     },
-     {
-      "id": "tor-A0914",
-      "name": "plastic shampoo tube",
-      "score": 5.59
-     }
-    ],
-    "votes": [
-     {
-      "order": "by relevance",
-      "pick": "tor-A0919",
-      "variantStated": false
-     },
-     {
-      "order": "reversed",
-      "pick": "tor-A0919",
-      "variantStated": false
-     }
-    ],
-    "gates": [
-     {
-      "name": "agreement",
-      "passed": true,
-      "detail": "2 of 2 orderings agree"
-     },
-     {
-      "name": "word evidence",
-      "passed": true,
-      "detail": "shares \"plastic\", \"straw\""
-     },
-     {
-      "name": "verification",
-      "passed": true,
-      "detail": "a separate yes/no check confirms the entry names this item"
-     }
-    ]
-   }
-  },
-  "baseline": {
-   "bin": "Garbage Bin",
-   "binCode": "garbage",
-   "why": "Plastic straws are too small and lightweight for recycling; they go in landfill.",
-   "usage": {
-    "calls": 1,
-    "promptTokens": 299,
-    "completionTokens": 32,
-    "costUsd": 0.0001185
-   }
-  },
-  "computed": "2026-10-14"
- },
- "toronto|kitchen sponge": {
-  "answer": {
-   "status": "answer",
-   "city": "toronto",
-   "query": "kitchen sponge",
-   "entries": [
-    {
-     "id": "tor-A0978",
-     "name": "sponge",
-     "bins": [
-      {
-       "code": "garbage",
-       "label": "Garbage Bin",
-       "tone": "grey",
-       "description": "Garbage (landfill)."
-      }
-     ],
-     "note": "Place this item in the Garbage Bin.",
-     "url": null
-    }
-   ],
-   "closest": [],
-   "reason": "Matched the official entry \"sponge\".",
-   "mode": "llm",
-   "usage": {
-    "calls": 4,
-    "promptTokens": 1318,
-    "completionTokens": 101,
-    "costUsd": 0.0004863
-   },
-   "trace": {
-    "expansions": [
-     "sponge",
-     "cleaning sponge",
-     "dish sponge",
-     "scrubber",
-     "washing sponge"
-    ],
-    "candidates": [
-     {
-      "id": "tor-A2143",
-      "name": "cellulose sponge",
-      "score": 9.23
-     },
-     {
-      "id": "tor-A0978",
-      "name": "sponge",
-      "score": 8.96
-     },
-     {
-      "id": "tor-A0409",
-      "name": "kitchen cabinet",
-      "score": 7.52
-     },
-     {
-      "id": "tor-A0410",
-      "name": "kitchen cupboards",
-      "score": 7.52
-     },
-     {
-      "id": "tor-A0813",
-      "name": "kitchen scale",
-      "score": 7.52
-     },
-     {
-      "id": "tor-A1160",
-      "name": "kitchen utensil",
-      "score": 7.52
-     },
-     {
-      "id": "tor-A2150",
-      "name": "loofah",
-      "score": 7.02
-     },
-     {
-      "id": "tor-A0936",
-      "name": "pot scrubber",
-      "score": 4.61
-     }
-    ],
-    "votes": [
-     {
-      "order": "by relevance",
-      "pick": "tor-A0978",
-      "variantStated": false
-     },
-     {
-      "order": "reversed",
-      "pick": "tor-A0978",
-      "variantStated": false
-     }
-    ],
-    "gates": [
-     {
-      "name": "agreement",
-      "passed": true,
-      "detail": "2 of 2 orderings agree"
-     },
-     {
-      "name": "word evidence",
-      "passed": true,
-      "detail": "shares \"sponge\""
-     },
-     {
-      "name": "verification",
-      "passed": true,
-      "detail": "a separate yes/no check confirms the entry names this item"
-     }
-    ]
-   }
-  },
-  "baseline": {
-   "bin": "Garbage Bin",
-   "binCode": "garbage",
-   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in regular trash.",
-   "usage": {
-    "calls": 1,
-    "promptTokens": 300,
-    "completionTokens": 31,
-    "costUsd": 0.0001179
-   }
-  },
-  "computed": "2026-10-14"
- },
- "toronto|tea strainer": {
-  "answer": {
-   "status": "not_covered",
-   "city": "toronto",
-   "query": "tea strainer",
-   "entries": [],
-   "closest": [
-    {
-     "id": "tor-A0345",
-     "name": "tea light holders (aluminum or other material))"
-    },
-    {
-     "id": "tor-A1504",
-     "name": "tea"
-    },
-    {
-     "id": "tor-A1506",
-     "name": "tea leaves"
-    }
-   ],
-   "reason": "No entry in City of Toronto's official list names \"tea strainer\".",
-   "mode": "llm",
-   "usage": {
-    "calls": 3,
-    "promptTokens": 1105,
-    "completionTokens": 90,
-    "costUsd": 0.0004125
-   },
-   "trace": {
-    "expansions": [
-     "tea infuser",
-     "tea ball",
-     "tea filter",
-     "strainer spoon",
-     "mesh tea holder"
-    ],
-    "candidates": [
-     {
-      "id": "tor-A1872",
-      "name": "tent trailer",
-      "score": 8.68
-     },
-     {
-      "id": "tor-A0345",
-      "name": "tea light holders (aluminum or other material))",
-      "score": 7.83
-     },
-     {
-      "id": "tor-A1504",
-      "name": "tea",
-      "score": 7.79
-     },
-     {
-      "id": "tor-A1506",
-      "name": "tea leaves",
-      "score": 6.73
-     },
-     {
-      "id": "tor-A0857",
-      "name": "nylon tea bags",
-      "score": 6.07
-     },
-     {
-      "id": "tor-A0968",
-      "name": "silk tea bags",
-      "score": 6.07
-     },
-     {
-      "id": "tor-A1016",
-      "name": "tea bag wrappers",
-      "score": 6.07
-     },
-     {
-      "id": "tor-A1418",
-      "name": "loose leaf tea",
-      "score": 6.07
-     }
-    ],
-    "votes": [
-     {
-      "order": "by relevance",
-      "pick": null,
-      "variantStated": false
-     },
-     {
-      "order": "reversed",
-      "pick": null,
-      "variantStated": false
-     }
-    ],
-    "gates": [
-     {
-      "name": "model pick",
-      "passed": false,
-      "detail": "the model found no entry that names this item"
-     }
-    ]
-   }
-  },
-  "baseline": {
-   "bin": "Garbage Bin",
-   "binCode": "garbage",
-   "why": "Tea strainers are typically made of mixed materials and not recyclable; dispose in regular trash.",
-   "usage": {
-    "calls": 1,
-    "promptTokens": 300,
-    "completionTokens": 35,
-    "costUsd": 0.0001215
+    "promptTokens": 333,
+    "completionTokens": 29,
+    "costUsd": 0.000126
    }
   },
   "computed": "2026-10-14"

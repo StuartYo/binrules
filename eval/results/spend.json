@@ -129,6 +129,14 @@
    "calls": 0,
    "promptTokens": 0,
    "completionTokens": 0
+  },
+  {
+   "ts": "2026-10-14T05:18:46.583Z",
+   "label": "precompute-examples",
+   "usd": 0.000562,
+   "calls": 0,
+   "promptTokens": 0,
+   "completionTokens": 0
   }
  ]
 }

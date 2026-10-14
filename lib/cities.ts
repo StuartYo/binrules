@@ -1,11 +1,9 @@
 import brisbane from "../data/brisbane.json";
-import toronto from "../data/toronto.json";
 import type { CityData, CityId, Entry, EntryView } from "./types";
 import { buildIndex, type Index } from "./retrieve";
 
 const CITIES: Record<CityId, CityData> = {
   brisbane: brisbane as CityData,
-  toronto: toronto as CityData,
 };
 
 export const CITY_IDS = Object.keys(CITIES) as CityId[];
@@ -55,7 +53,7 @@ export function sourceLinks(city: CityData, e: { id: string; url: string | null 
       href: `https://data.brisbane.qld.gov.au/api/explore/v2.1/catalog/datasets/what-goes-in-my-bin/records?where=index%3D%22${idx}%22`,
     });
   } else {
-    links.push({ label: "Toronto Waste Wizard", href: city.source.councilUrl });
+    links.push({ label: "Official dataset", href: city.source.datasetUrl });
   }
   return links;
 }
