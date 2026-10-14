@@ -143,7 +143,9 @@ export function buildFinal(): Final {
     history.push({ label, note, headline: headlineOf(r.rows, r.rows[0]?.city ?? "brisbane"), model: String(r.meta.model) });
   };
   hist("dev-brisbane.json", "Dev split, final configuration", "The only split used for tuning. Final configuration, one run.");
-  hist("brisbane-test-run1.json", "Test split, first run (before a stop-word bug fix)", "The word 'can' was on my stop-word list, so 'Oil can' collapsed to 'Oil' and 'Cans (steel)' lost its head word. I fixed that one bug and re-ran the whole test split. The numbers above are the re-run.");
+  hist("brisbane-test-run1.json", "Brisbane test, run 1 (before the stop-word fix)", "The word 'can' was on my stop-word list, so 'Oil can' collapsed to 'Oil' and 'Cans (steel)' lost its head word. I fixed that one bug and re-ran the whole test split.");
+  hist("brisbane-test-run2.json", "Brisbane test, run 2 (before the variant fix)", "While building the demo I saw Toronto 'pizza box' answer 'food-soiled' only, because the model's own rewrites (for example 'greasy pizza box') were allowed to choose between condition variants. I changed it so only the resident's own words can choose a variant, and re-ran both cities. The numbers above are from that last run.");
+  hist("toronto-test-run1.json", "Toronto test, run 1 (before the variant fix)", "Same reason as Brisbane run 2.");
   let day1: Final["day1"] = null;
   if (fs.existsSync(path.join(RES, "day1-baseline-dev.json")) && fs.existsSync(path.join(RES, "day1-baseline-test.json"))) {
     const a = readRun("day1-baseline-dev.json");
@@ -241,7 +243,7 @@ export function renderResults(f: Final): string {
   lines.push("- **BinRules** rewrites the resident's words, retrieves candidate official entries, asks the model to point at the entry that names the same item, then code checks the pick (two orderings agree, shared words, a separate yes/no check) and reads the bins from the official entry. It declines when a check fails.");
   lines.push("- **Model alone** gets the city's list of bin labels with a one-line description each, and is allowed to answer UNSURE. It has no official list and no retrieval. Its answer counts as right if the bin appears anywhere in the official entry's options, which is the most generous reading.");
   lines.push("- **Right answer** for BinRules means it cited an entry I accepted for that question. The last column applies the model's looser rule (any bin from the official options) to BinRules too.");
-  lines.push("- Test questions were frozen before tuning (`eval/FROZEN.json`). Tuning used only the dev split. The test split was run once per configuration; one bug fix forced a second run, listed under History.");
+  lines.push("- Test questions were frozen before tuning (`eval/FROZEN.json`). Tuning used only the dev split. The test split was run once per configuration. Two bug fixes found after test runs forced re-runs of the whole split; every run is listed under History.");
   lines.push("");
   lines.push(`## Brisbane (test split; official list of ${getCity("brisbane").entries.length} entries)`);
   lines.push("");
@@ -266,7 +268,7 @@ export function renderResults(f: Final): string {
     lines.push("### What went wrong in Toronto");
     lines.push("");
     lines.push(failures(f.rows, "toronto"));
-    lines.push("Reading the Toronto misses: several answers that my labels count as wrong cite a different but legitimate Toronto entry for the same item (for example \"smartphones\" for an old smartphone, \"Tim Hortons coffee cup (disposable)\" for a Tim Hortons cup), which the last column of the table forgives. Several \"not covered\" items turned out to have a broader Toronto entry that a reader could call a fair match (\"hats\", \"puzzle\", \"walking aid\", \"floor mats\"). I did not relabel after seeing the results.");
+    lines.push("Reading the Toronto misses: several answers that my labels count as wrong cite a different but legitimate Toronto entry for the same item (for example \"smartphones\" for an old smartphone, \"Tim Hortons coffee cup (disposable)\" for a Tim Hortons cup), which the last column of the table forgives. Several \"not covered\" items turned out to have a broader Toronto entry that a reader could call a fair match (\"hats\", \"puzzle\", \"walking aid\", \"floor mats\", \"kitchen utensil\"). Toronto's list is also full of near-duplicate entries, so some held-out items were answered from a sibling that really is the same item (\"dog treat\" for rawhide chews, \"Sea-Doo\" for Jet Ski, \"fruit juice pouch\" for a juice drink pouch). I did not relabel anything after seeing the results.");
     lines.push("");
   }
   lines.push("## History and disclosures");

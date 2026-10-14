@@ -129,15 +129,263 @@
   },
   "computed": "2026-10-14"
  },
- "brisbane|takeaway coffee cup": {
+ "brisbane|tea bag": {
   "answer": {
    "status": "answer",
    "city": "brisbane",
-   "query": "takeaway coffee cup",
+   "query": "tea bags",
    "entries": [
     {
-     "id": "bne-247",
-     "name": "Takeaway coffee cups",
+     "id": "bne-252",
+     "name": "Tea bags",
+     "bins": [
+      {
+       "code": "red-bin",
+       "label": "Red bin",
+       "tone": "red",
+       "description": "General waste kerbside bin (red lid)."
+      }
+     ],
+     "note": "Tea bags can be composted (if no plastic is present) or placed in the red bin.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Tea bags\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1353,
+    "completionTokens": 88,
+    "costUsd": 0.0004851
+   },
+   "trace": {
+    "expansions": [
+     "tea bag",
+     "teabag",
+     "tea sachet",
+     "herbal tea bag",
+     "loose leaf tea bag"
+    ],
+    "candidates": [
+     {
+      "id": "bne-252",
+      "name": "Tea bags",
+      "score": 10.48
+     },
+     {
+      "id": "bne-251",
+      "name": "Tea bag foil wrapper",
+      "score": 8.8
+     },
+     {
+      "id": "bne-12",
+      "name": "Bags (plastic bags)",
+      "score": 5.14
+     },
+     {
+      "id": "bne-13",
+      "name": "Bags (reuseable bags made of woven polypropylene)",
+      "score": 4.31
+     },
+     {
+      "id": "bne-74",
+      "name": "Confectionary bags",
+      "score": 4.28
+     },
+     {
+      "id": "bne-294",
+      "name": "Ziplock bags",
+      "score": 4.28
+     },
+     {
+      "id": "bne-61",
+      "name": "Citrus bag netting",
+      "score": 3.88
+     },
+     {
+      "id": "bne-109",
+      "name": "Frozen food bags",
+      "score": 3.88
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-252",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-252",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"tea\", \"bag\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Green bin",
+   "binCode": "green-bin",
+   "why": "Tea bags can be placed in the garden organics bin if they are biodegradable.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 332,
+    "completionTokens": 31,
+    "costUsd": 0.0001275
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|business card": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "business cards",
+   "entries": [
+    {
+     "id": "bne-39",
+     "name": "Business cards",
+     "bins": [
+      {
+       "code": "red-bin",
+       "label": "Red bin",
+       "tone": "red",
+       "description": "General waste kerbside bin (red lid)."
+      }
+     ],
+     "note": null,
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Business cards\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1308,
+    "completionTokens": 82,
+    "costUsd": 0.0004662
+   },
+   "trace": {
+    "expansions": [
+     "paper card",
+     "visiting card",
+     "calling card",
+     "name card",
+     "contact card"
+    ],
+    "candidates": [
+     {
+      "id": "bne-39",
+      "name": "Business cards",
+      "score": 12.95
+     },
+     {
+      "id": "bne-202",
+      "name": "Plastic credit cards and alike",
+      "score": 5.21
+     },
+     {
+      "id": "bne-14",
+      "name": "Baking paper (grease proof paper)",
+      "score": 3.95
+     },
+     {
+      "id": "bne-187",
+      "name": "Paper",
+      "score": 3.82
+     },
+     {
+      "id": "bne-75",
+      "name": "Contact lens (contact lenses, plastic film and pods)",
+      "score": 3.56
+     },
+     {
+      "id": "bne-40",
+      "name": "Butchers paper",
+      "score": 3.48
+     },
+     {
+      "id": "bne-228",
+      "name": "Shredded paper",
+      "score": 3.48
+     },
+     {
+      "id": "bne-84",
+      "name": "Disposable paper plates",
+      "score": 3.19
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-39",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-39",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"business\", \"card\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Yellow bin",
+   "binCode": "yellow-bin",
+   "why": "Paper business cards can be recycled in kerbside yellow bin.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 332,
+    "completionTokens": 26,
+    "costUsd": 0.000123
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|milk carton": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "milk carton",
+   "entries": [
+    {
+     "id": "bne-49",
+     "name": "Cartons and Tetra Paks (milk and juice)",
      "bins": [
       {
        "code": "public-drop",
@@ -152,78 +400,78 @@
        "description": "General waste kerbside bin (red lid)."
       }
      ],
-     "note": "Drop off at a participating convenience store or cafe to be recycled, or dispose of the cup and lid in the red bin. Consider investing in a reusable coffee cup and avoid single-use cups.",
+     "note": "Dispose of in your red bin or some flavoured milk and juice cartons can be taken to a container refund point (please check individualised items for qualifying symbol).",
      "url": null
     }
    ],
    "closest": [],
-   "reason": "Matched the official entry \"Takeaway coffee cups\".",
+   "reason": "Matched the official entry \"Cartons and Tetra Paks (milk and juice)\".",
    "mode": "llm",
    "usage": {
     "calls": 4,
-    "promptTokens": 1366,
-    "completionTokens": 88,
-    "costUsd": 0.0004890000000000001
+    "promptTokens": 1408,
+    "completionTokens": 118,
+    "costUsd": 0.0005286000000000001
    },
    "trace": {
     "expansions": [
-     "coffee cup",
-     "disposable coffee cup",
-     "paper coffee cup",
-     "to-go coffee cup",
-     "single-use coffee cup"
+     "milk carton",
+     "carton of milk",
+     "paperboard container",
+     "aseptic box",
+     "drink box"
     ],
     "candidates": [
      {
-      "id": "bne-247",
-      "name": "Takeaway coffee cups",
-      "score": 15.14
+      "id": "bne-49",
+      "name": "Cartons and Tetra Paks (milk and juice)",
+      "score": 9.44
      },
      {
-      "id": "bne-248",
-      "name": "Takeaway coffee cups (BioPak cups and containers)",
-      "score": 14.02
+      "id": "bne-91",
+      "name": "Egg cartons",
+      "score": 6.2
      },
      {
-      "id": "bne-275",
-      "name": "Water bottle (single use)",
-      "score": 5.86
+      "id": "bne-254",
+      "name": "Tetra Pak (flavoured milk, pure fruit poppers)",
+      "score": 4.06
      },
      {
-      "id": "bne-67",
-      "name": "Coffee grounds",
-      "score": 5.36
+      "id": "bne-201",
+      "name": "Plastic bottles (cleaning bottles, clear bottles and jars, opaque milk bottle, and shampoo bottles)",
+      "score": 3.26
      },
      {
-      "id": "bne-84",
-      "name": "Disposable paper plates",
-      "score": 5.3
+      "id": "bne-123",
+      "name": "Glass drink bottles",
+      "score": 3.17
      },
      {
-      "id": "bne-68",
-      "name": "Coffee Pods (Aluminium)",
-      "score": 4.85
+      "id": "bne-197",
+      "name": "Pizza boxes",
+      "score": 2.9
      },
      {
-      "id": "bne-205",
-      "name": "Plastic takeaway containers",
-      "score": 4.85
+      "id": "bne-276",
+      "name": "Wax boxes",
+      "score": 2.9
      },
      {
-      "id": "bne-249",
-      "name": "Takeaway food container (plastic)",
-      "score": 4.47
+      "id": "bne-56",
+      "name": "Cereal box plastic liners",
+      "score": 2.46
      }
     ],
     "votes": [
      {
       "order": "by relevance",
-      "pick": "bne-247",
+      "pick": "bne-49",
       "variantStated": false
      },
      {
       "order": "reversed",
-      "pick": "bne-247",
+      "pick": "bne-49",
       "variantStated": false
      }
     ],
@@ -236,131 +484,7 @@
      {
       "name": "word evidence",
       "passed": true,
-      "detail": "shares \"takeaway\", \"coffee\", \"cup\""
-     },
-     {
-      "name": "verification",
-      "passed": true,
-      "detail": "a separate yes/no check confirms the entry names this item"
-     }
-    ]
-   }
-  },
-  "baseline": {
-   "bin": "Red bin",
-   "binCode": "red-bin",
-   "why": "Takeaway cups have plastic lining; not recyclable in yellow bin.",
-   "usage": {
-    "calls": 1,
-    "promptTokens": 334,
-    "completionTokens": 28,
-    "costUsd": 0.0001254
-   }
-  },
-  "computed": "2026-10-14"
- },
- "brisbane|yoghurt tub": {
-  "answer": {
-   "status": "answer",
-   "city": "brisbane",
-   "query": "yoghurt tubs",
-   "entries": [
-    {
-     "id": "bne-292",
-     "name": "Yoghurt containers",
-     "bins": [
-      {
-       "code": "yellow-bin",
-       "label": "Yellow bin",
-       "tone": "yellow",
-       "description": "Recycling kerbside bin (yellow lid)."
-      }
-     ],
-     "note": null,
-     "url": null
-    }
-   ],
-   "closest": [],
-   "reason": "Matched the official entry \"Yoghurt containers\".",
-   "mode": "llm",
-   "usage": {
-    "calls": 4,
-    "promptTokens": 1430,
-    "completionTokens": 110,
-    "costUsd": 0.000528
-   },
-   "trace": {
-    "expansions": [
-     "yogurt container",
-     "yogurt cup",
-     "yogurt pot",
-     "dairy tub",
-     "plastic yogurt tub"
-    ],
-    "candidates": [
-     {
-      "id": "bne-292",
-      "name": "Yoghurt containers",
-      "score": 9.2
-     },
-     {
-      "id": "bne-128",
-      "name": "Hard plastics (rigid plastics such as buckets, chairs, car bumpers, crates, plastic containers, plastic gardening pots and tubs.)",
-      "score": 8.16
-     },
-     {
-      "id": "bne-248",
-      "name": "Takeaway coffee cups (BioPak cups and containers)",
-      "score": 5.85
-     },
-     {
-      "id": "bne-293",
-      "name": "Yoghurt pouches",
-      "score": 5.83
-     },
-     {
-      "id": "bne-205",
-      "name": "Plastic takeaway containers",
-      "score": 4.61
-     },
-     {
-      "id": "bne-239",
-      "name": "Squeeze pouches (baby food, yoghurt, fruit)",
-      "score": 4.3
-     },
-     {
-      "id": "bne-249",
-      "name": "Takeaway food container (plastic)",
-      "score": 4.26
-     },
-     {
-      "id": "bne-198",
-      "name": "Plant pots",
-      "score": 3.12
-     }
-    ],
-    "votes": [
-     {
-      "order": "by relevance",
-      "pick": "bne-292",
-      "variantStated": false
-     },
-     {
-      "order": "reversed",
-      "pick": "bne-292",
-      "variantStated": false
-     }
-    ],
-    "gates": [
-     {
-      "name": "agreement",
-      "passed": true,
-      "detail": "2 of 2 orderings agree"
-     },
-     {
-      "name": "word evidence",
-      "passed": true,
-      "detail": "shares \"yoghurt\", \"container\""
+      "detail": "shares \"carton\", \"milk\""
      },
      {
       "name": "verification",
@@ -373,111 +497,7 @@
   "baseline": {
    "bin": "Yellow bin",
    "binCode": "yellow-bin",
-   "why": "Yoghurt tubs made of plastic can be rinsed and placed in the yellow recycling bin.",
-   "usage": {
-    "calls": 1,
-    "promptTokens": 335,
-    "completionTokens": 32,
-    "costUsd": 0.0001293
-   }
-  },
-  "computed": "2026-10-14"
- },
- "brisbane|iphone": {
-  "answer": {
-   "status": "answer",
-   "city": "brisbane",
-   "query": "old iPhone",
-   "entries": [
-    {
-     "id": "bne-165",
-     "name": "Mobile phones",
-     "bins": [
-      {
-       "code": "council-drop",
-       "label": "Council drop off points",
-       "tone": "blue",
-       "description": "Council drop-off locations such as community recycling hubs."
-      },
-      {
-       "code": "public-drop",
-       "label": "Public drop off points",
-       "tone": "blue",
-       "description": "Container refund points, participating retailers, pharmacies and similar public drop-off locations."
-      },
-      {
-       "code": "rrc-yellow",
-       "label": "Resource recovery centre, yellow line",
-       "tone": "yellow",
-       "description": "Council resource recovery centre: recyclables accepted at the yellow lines, usually free."
-      }
-     ],
-     "note": "Drop off mobile phones for free at any Council library, Council's community recycling hubs, other participating mobile stores. Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Please ensure to delete sensitive data and personal information prior to recycling.",
-     "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
-    }
-   ],
-   "closest": [],
-   "reason": "Matched the official entry \"Mobile phones\".",
-   "mode": "llm",
-   "usage": {
-    "calls": 4,
-    "promptTokens": 1144,
-    "completionTokens": 96,
-    "costUsd": 0.0004296
-   },
-   "trace": {
-    "expansions": [
-     "smartphone",
-     "cell phone",
-     "mobile phone"
-    ],
-    "candidates": [
-     {
-      "id": "bne-165",
-      "name": "Mobile phones",
-      "score": 10.25
-     },
-     {
-      "id": "bne-191",
-      "name": "Phone books",
-      "score": 6.8
-     }
-    ],
-    "votes": [
-     {
-      "order": "by relevance",
-      "pick": "bne-165",
-      "variantStated": false
-     },
-     {
-      "order": "reversed",
-      "pick": "bne-165",
-      "variantStated": false
-     }
-    ],
-    "gates": [
-     {
-      "name": "agreement",
-      "passed": true,
-      "detail": "2 of 2 orderings agree"
-     },
-     {
-      "name": "word evidence",
-      "passed": true,
-      "detail": "shares \"mobile\", \"phone\""
-     },
-     {
-      "name": "verification",
-      "passed": true,
-      "detail": "a separate yes/no check confirms the entry names this item"
-     }
-    ]
-   }
-  },
-  "baseline": {
-   "bin": "Public drop off points",
-   "binCode": "public-drop",
-   "why": "E-waste like old phones can be dropped at e-recycling points.",
+   "why": "Milk cartons are recyclable in Brisbane’s yellow-lid recycling bin.",
    "usage": {
     "calls": 1,
     "promptTokens": 333,
@@ -512,8 +532,8 @@
    "usage": {
     "calls": 3,
     "promptTokens": 1083,
-    "completionTokens": 86,
-    "costUsd": 0.0004023
+    "completionTokens": 83,
+    "costUsd": 0.0003996
    },
    "trace": {
     "expansions": [
@@ -584,12 +604,12 @@
   "baseline": {
    "bin": "Red bin",
    "binCode": "red-bin",
-   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in general waste.",
+   "why": "Kitchen sponges are non-recyclable and go in general waste.",
    "usage": {
     "calls": 1,
     "promptTokens": 333,
-    "completionTokens": 30,
-    "costUsd": 0.0001269
+    "completionTokens": 28,
+    "costUsd": 0.0001251
    }
   },
   "computed": "2026-10-14"
@@ -682,10 +702,24 @@
  },
  "toronto|pizza box": {
   "answer": {
-   "status": "answer",
+   "status": "depends",
    "city": "toronto",
    "query": "pizza box",
    "entries": [
+    {
+     "id": "tor-A0138",
+     "name": "pizza boxes (unsoiled)",
+     "bins": [
+      {
+       "code": "blue-bin",
+       "label": "Blue Bin",
+       "tone": "blue",
+       "description": "Recycling (Blue Bin)."
+      }
+     ],
+     "note": "Remove any plastic pieces and place those in the Garbage Bin. Place empty, unsoiled box in the Blue Bin.",
+     "url": null
+    },
     {
      "id": "tor-A1461",
      "name": "pizza boxes (food-soiled)",
@@ -702,7 +736,7 @@
     }
    ],
    "closest": [],
-   "reason": "Matched the official entry \"pizza boxes (food-soiled)\".",
+   "reason": "\"pizza boxes\" has several official entries and the answer depends on the detail in brackets.",
    "mode": "llm",
    "usage": {
     "calls": 4,
@@ -794,12 +828,12 @@
   "baseline": {
    "bin": "Garbage Bin",
    "binCode": "garbage",
-   "why": "Pizza boxes soiled with food/grease go in garbage; clean cardboard can be recycled.",
+   "why": "Pizza boxes soiled with grease/food go to landfill; clean cardboard can be recycled.",
    "usage": {
     "calls": 1,
     "promptTokens": 300,
-    "completionTokens": 34,
-    "costUsd": 0.00012059999999999999
+    "completionTokens": 35,
+    "costUsd": 0.0001215
    }
   },
   "computed": "2026-10-14"
@@ -1041,12 +1075,12 @@
   "baseline": {
    "bin": "Garbage Bin",
    "binCode": "garbage",
-   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in regular trash.",
+   "why": "Kitchen sponges are non-recyclable and go in regular trash.",
    "usage": {
     "calls": 1,
     "promptTokens": 300,
-    "completionTokens": 31,
-    "costUsd": 0.0001179
+    "completionTokens": 29,
+    "costUsd": 0.00011609999999999999
    }
   },
   "computed": "2026-10-14"
@@ -1076,16 +1110,16 @@
    "usage": {
     "calls": 3,
     "promptTokens": 1105,
-    "completionTokens": 88,
-    "costUsd": 0.00041069999999999995
+    "completionTokens": 79,
+    "costUsd": 0.00040260000000000003
    },
    "trace": {
     "expansions": [
      "tea infuser",
+     "strainer ball",
      "tea ball",
-     "tea filter",
-     "tea sock",
-     "strainer spoon"
+     "brew basket",
+     "mesh filter"
     ],
     "candidates": [
      {

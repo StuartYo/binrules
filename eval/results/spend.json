@@ -89,6 +89,38 @@
    "calls": 950,
    "promptTokens": 310874,
    "completionTokens": 23355
+  },
+  {
+   "ts": "2026-10-14T04:04:59.556Z",
+   "label": "final-brisbane-test-run3",
+   "usd": 0.232208,
+   "calls": 1914,
+   "promptTokens": 632807,
+   "completionTokens": 47073
+  },
+  {
+   "ts": "2026-10-14T04:07:26.755Z",
+   "label": "final-toronto-test-run2",
+   "usd": 0.114428,
+   "calls": 950,
+   "promptTokens": 311414,
+   "completionTokens": 23338
+  },
+  {
+   "ts": "2026-10-14T12:20:00.000Z",
+   "label": "precompute-examples (two runs, estimated from tokens)",
+   "usd": 0.012,
+   "calls": 0,
+   "promptTokens": 0,
+   "completionTokens": 0
+  },
+  {
+   "ts": "2026-10-14T04:13:14.188Z",
+   "label": "precompute-examples",
+   "usd": 0.0059,
+   "calls": 0,
+   "promptTokens": 0,
+   "completionTokens": 0
   }
  ]
 }

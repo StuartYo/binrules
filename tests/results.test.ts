@@ -50,6 +50,16 @@ describe("results consistency", () => {
     expect(readme.slice(a, z + README_END.length)).toBe(lf(renderReadmeBlock(final)));
   });
 
+  it("hand-written README claims still hold for the recorded results", () => {
+    const b = final.headline["brisbane"];
+    const declined = b.messy.binrules.refused / b.messy.n;
+    expect(declined).toBeGreaterThan(0.1);
+    expect(declined).toBeLessThan(0.15); // README: about one in eight messy questions declined
+    expect(final.spend.evalUsd).toBeGreaterThan(1.3);
+    expect(final.spend.evalUsd).toBeLessThan(1.35); // README: about $1.31 of the $2.00 cap
+    expect(final.headline["toronto"].official.n).toBe(120); // README: seeded sample of 120
+  });
+
   it("frozen case files and the baseline prompt still match their recorded hashes", () => {
     const frozen = JSON.parse(fs.readFileSync(path.join(ROOT, "eval", "FROZEN.json"), "utf8")) as { cases: Record<string, string>; baselineSha256: string };
     for (const [f, h] of Object.entries(frozen.cases)) {
