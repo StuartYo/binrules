@@ -1,5 +1,7 @@
 # BinRules
 
+![BinRules: which bin, only what the council's own list says](docs/cover.png)
+
 **Which bin? Only what your council's own list says.**
 
 BinRules answers "which bin does this go in?" strictly from a city's official sorting list. It shows the exact official entry it used, with a link to the source, and it says "not covered" instead of guessing when the list does not name the item.
@@ -80,7 +82,7 @@ Reproduce (needs your own `NEBIUS_API_KEY`; a full Brisbane test run costs about
 
 ```bash
 npm install
-npm test                      # 46 tests, no API calls
+npm test                      # 47 tests, no API calls
 npm run eval -- --city brisbane --split test --systems binrules,model --out eval/results/my-run.json
 npx tsx eval/show.ts eval/results/my-run.json --wrong
 ```
@@ -100,7 +102,7 @@ Offline accuracy is all I have today. In a pilot, the number to move is plant co
 
 ## Cost
 
-Evaluation and development used about $1.31 of a $2.00 project cap on Nebius Token Factory (ledger in `eval/results/spend.json`). A live check costs about $0.0005 with the comparison panel on. The public demo is capped at 150 model checks and $0.05 per day per instance.
+Evaluation and development used about $1.31 of a $2.00 project cap on Nebius Token Factory through the final test runs (ledger in `eval/results/spend.json`; later demo and video checks add a few cents). A live check costs about $0.0005 with the comparison panel on. The public demo is capped at 150 model checks and $0.05 per day per instance.
 
 ## Method note
 
