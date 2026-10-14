@@ -1,0 +1,9 @@
+{
+ "note": "Case files and the model-alone baseline prompt are frozen at this commit. Tuning uses only the dev split.",
+ "cases": {
+  "brisbane.heldout.json": "c748a23cfcf6d814dd886d4910421cbea5d5ee9caf1da7d23b610dd605b48ec5",
+  "brisbane.messy.json": "2f9408f9adb41d091e299231c448797f9e76658c03881722504dd616124a4096",
+  "brisbane.oos.json": "5ee907dca0a275864eda2fd9218eed65bccf89e064ebb7c2da04d770872607f5"
+ },
+ "baselineSha256": "4488be762e3c717d561393ed8b555a9c6b4612c79e4a55238dfa3ce88f93a1ce"
+}

@@ -1,0 +1,7 @@
+{
+  "_about": "Held-out-from-the-knowledge-base test. For each listed official entry, the entry is REMOVED from the knowledge base and its own official name is asked. No other entry names the same item (checked by hand), so the right behaviour is to refuse; any answer cites a different entry and is a guess. The full official list is the ground truth for what the right bin would have been, so this also measures how often an analogy guess would have been right. Entries were chosen by hand before any tuning and exclude electronics, metals, glass, garden and appliance entries that broad entries could cover.",
+  "cases": {
+    "test": ["bne-15", "bne-154", "bne-250", "bne-278", "bne-131", "bne-276", "bne-209", "bne-139", "bne-251", "bne-284", "bne-279", "bne-51", "bne-99", "bne-290", "bne-101", "bne-66", "bne-31", "bne-89", "bne-91", "bne-85", "bne-215", "bne-260", "bne-291", "bne-17", "bne-18", "bne-95", "bne-8"],
+    "dev": ["bne-42", "bne-77", "bne-196", "bne-265", "bne-255", "bne-153", "bne-238", "bne-56"]
+  }
+}

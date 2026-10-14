@@ -1,0 +1,3150 @@
+{
+ "city": "brisbane",
+ "displayName": "Brisbane, Australia",
+ "authority": "Brisbane City Council",
+ "source": {
+  "title": "What goes in my bin (Brisbane City Council open data)",
+  "datasetUrl": "https://data.brisbane.qld.gov.au/explore/dataset/what-goes-in-my-bin/",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "modified": "2026-07-20T08:11:48+00:00",
+  "retrieved": "2026-10-14",
+  "councilUrl": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling",
+  "councilName": "Brisbane City Council",
+  "note": "Entry URLs are the council pages named in the dataset's own published_note_url field."
+ },
+ "bins": {
+  "yellow-bin": {
+   "label": "Yellow bin",
+   "tone": "yellow",
+   "description": "Recycling kerbside bin (yellow lid)."
+  },
+  "rrc-yellow": {
+   "label": "Resource recovery centre, yellow line",
+   "tone": "yellow",
+   "description": "Council resource recovery centre: recyclables accepted at the yellow lines, usually free."
+  },
+  "public-drop": {
+   "label": "Public drop off points",
+   "tone": "blue",
+   "description": "Container refund points, participating retailers, pharmacies and similar public drop-off locations."
+  },
+  "red-bin": {
+   "label": "Red bin",
+   "tone": "red",
+   "description": "General waste kerbside bin (red lid)."
+  },
+  "other": {
+   "label": "Other (see note)",
+   "tone": "grey",
+   "description": "A special instruction applies, such as home composting or a specialist contractor. Read the official note."
+  },
+  "haz-days": {
+   "label": "Free hazardous waste drop-off days",
+   "tone": "orange",
+   "description": "Free hazardous waste drop-off days at council resource recovery centres."
+  },
+  "green-bin": {
+   "label": "Green bin",
+   "tone": "green",
+   "description": "Garden organics kerbside bin (lime green lid)."
+  },
+  "rrc-green": {
+   "label": "Resource recovery centre, green line",
+   "tone": "green",
+   "description": "Council resource recovery centre: green waste accepted at the green lines, fees apply."
+  },
+  "kerb-large": {
+   "label": "Kerbside large item collection",
+   "tone": "grey",
+   "description": "Council kerbside large item collection."
+  },
+  "rrc-red": {
+   "label": "Resource recovery centre, red line",
+   "tone": "red",
+   "description": "Council resource recovery centre: general waste accepted at the red lines, fees apply."
+  },
+  "council-drop": {
+   "label": "Council drop off points",
+   "tone": "blue",
+   "description": "Council drop-off locations such as community recycling hubs."
+  }
+ },
+ "entries": [
+  {
+   "id": "bne-1",
+   "name": "Aerosol cans (empty)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-2",
+   "name": "Air conditioners",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-3",
+   "name": "Aluminium cans",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "yellow-bin"
+   ],
+   "note": "Recycle eligible cans at a container refund point. Council's resource recovery centres are not a container refund point.",
+   "url": null
+  },
+  {
+   "id": "bne-4",
+   "name": "Aluminium foil",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Cleaned aluminium foil is recyclable if scrunched into a fist sized ball. Heavily food soiled aluminium foil should be placed in the waste bin.",
+   "url": null
+  },
+  {
+   "id": "bne-5",
+   "name": "Aluminium pouches",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-6",
+   "name": "Aluminium scrap (metals)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-7",
+   "name": "Aluminium trays",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-8",
+   "name": "Ammunition and explosive devices",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "Ammunition and explosive devices are prohibited from Council's kerbside bins and resource recovery centres. Call the 24/7 Explosive Inspectorate hotline 1300 739 868 for collection.",
+   "url": "https://www.rshq.qld.gov.au/contact/explosives-inspectorate"
+  },
+  {
+   "id": "bne-9",
+   "name": "Animal waste (including kitty litter)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Animal waste contained in a plastic bag should be placed in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-10",
+   "name": "Antifreeze",
+   "aliases": [],
+   "bins": [
+    "haz-days",
+    "other"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-11",
+   "name": "Asbestos",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "It is illegal to dump asbestos in any household kerbside bin, business bins, Council’s resource recovery centres, public place bins, or any public place. Contact a licensed contractor for asbestos removal and treatment.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-12",
+   "name": "Bags (plastic bags)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-13",
+   "name": "Bags (reuseable bags made of woven polypropylene)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Repair your reusable bags where possible.",
+   "url": null
+  },
+  {
+   "id": "bne-14",
+   "name": "Baking paper (grease proof paper)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider alternatives by greasing pans or using reusable silicone baking liners.",
+   "url": null
+  },
+  {
+   "id": "bne-15",
+   "name": "Balloons",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Balloons are soft plastics and cannot be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-16",
+   "name": "Bamboo plants",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-17",
+   "name": "Bamboo utensils",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-18",
+   "name": "Band aids and dressings",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-19",
+   "name": "Bark (loose)",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-20",
+   "name": "Batteries (household, lithium, rechargeable)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "DO NOT dispose of batteries in your kerbside bins as this can cause fires in bin collection trucks. Council's resource recovery centres accepts some batteries for free at the recycling facility, follow the yellow lines for correct disposal on site. Remove batteries from devices. Car lithium batteries and large solar batteries are NOT accepted.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-21",
+   "name": "Batteries (lead acid car, e-bike, e-scooter, rechargeable tools)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "DO NOT dispose of batteries in your kerbside bins as this can cause fires in bin collection trucks. Council's resource recovery centres accepts batteries for free at the recycling facility, follow the yellow lines for correct disposal on site. If the battery cannot be removed from the item, it may not be accepted. Lithium car batteries and large solar batteries are NOT accepted.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-22",
+   "name": "Bed bases (metal)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-23",
+   "name": "Bed bases (not metal)",
+   "aliases": [],
+   "bins": [
+    "kerb-large",
+    "rrc-red"
+   ],
+   "note": "Non-metal bed bases can either be placed in your Kerbside large item collection (less than two cubic metres). Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/kerbside-collection/acceptable-kerbside-collection-items"
+  },
+  {
+   "id": "bne-24",
+   "name": "Beer clips",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Beer clips can be taken to a participating liquor store for recycling.",
+   "url": null
+  },
+  {
+   "id": "bne-25",
+   "name": "Bicycle tyres and tubes",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "kerb-large"
+   ],
+   "note": "Bicycle tyres and tubes can either be placed in your Kerbside large item collection (less than two cubic metres) or taken to a participating bicycle store to be recycled.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/kerbside-collection/acceptable-kerbside-collection-items"
+  },
+  {
+   "id": "bne-26",
+   "name": "Bicycles",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-27",
+   "name": "Biodegradable marked items",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Items marked with a biodegradable symbol are not suitable for the recycling process and must be placed in the red bin. Consider using alternatives that can be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-28",
+   "name": "Blister packs, tablet and capsule packaging",
+   "aliases": [],
+   "bins": [
+    "council-drop",
+    "public-drop"
+   ],
+   "note": "Drop off empty blister packs, tablet and capsule packaging at one of Council’s community recycling hubs or visit your local pharmacy to find a safe disposal location. You can also dispose of empty blister packs in your red bin.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
+  },
+  {
+   "id": "bne-29",
+   "name": "Books (unusable)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "red-bin"
+   ],
+   "note": "Remove any soft plastic covering and binding before placing book pages into yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-30",
+   "name": "Books (usable)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "other"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-31",
+   "name": "Boots (safety)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Consider donating your old boots to a local charity or enquire with your workwear provider to find a recycling program.",
+   "url": null
+  },
+  {
+   "id": "bne-32",
+   "name": "Bottle caps and lids",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "red-bin"
+   ],
+   "note": "Keep caps and lids on bottles and containers when placing in the yellow bin. If plastic lids are loose they are too small for current recycling technology and should be placed in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-33",
+   "name": "Brake fluid",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-34",
+   "name": "Branches and leaves",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-bins/green-waste-recycling-service"
+  },
+  {
+   "id": "bne-35",
+   "name": "Bread bag clips (plastic)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Paper bread bag clips can be composted at home.",
+   "url": null
+  },
+  {
+   "id": "bne-36",
+   "name": "Bricks",
+   "aliases": [],
+   "bins": [
+    "other",
+    "rrc-red"
+   ],
+   "note": "If the bricks are in good condition consider selling or giving away to reduce waste to landfill. Council's resource recovery centres accepts small residential quantities of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-37",
+   "name": "Bubble wrap",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "If the bubble wrap is still intact, continue to reuse to protect items from damage. Bubble wrap is a soft plastic, it cannot be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-38",
+   "name": "Building materials",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept residential quantities of recyclable building materials for free at the recycling facility, follow the yellow lines for correct disposal on site. Council's resource recovery centres accepts residential quantities of non-recyclable materials for disposal in the general waste facility, follow the red lines for correct disposal. Advise the gatehouse staff what materials you have and they will direct you accordingly. Fees apply for general waste materials.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-39",
+   "name": "Business cards",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-40",
+   "name": "Butchers paper",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-41",
+   "name": "Butter and margarine containers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-42",
+   "name": "Candles and candle wax",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Heat-resistant candle jars are perfect for upcycling around the house once the candle has been used up. These jars cannot be recycled in your home yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-43",
+   "name": "Cans (steel)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-44",
+   "name": "Car parts (steel and alloy)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-45",
+   "name": "Cardboard (non-waxed)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-46",
+   "name": "Cardboard (plasticised or waxed)",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-47",
+   "name": "Carpet and rugs (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-48",
+   "name": "Carpet and rugs (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-49",
+   "name": "Cartons and Tetra Paks (milk and juice)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Dispose of in your red bin or some flavoured milk and juice cartons can be taken to a container refund point (please check individualised items for qualifying symbol).",
+   "url": null
+  },
+  {
+   "id": "bne-50",
+   "name": "Cartridges (printer and toner)",
+   "aliases": [],
+   "bins": [
+    "public-drop"
+   ],
+   "note": "Drop off at a participating electronic goods retailer to be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-51",
+   "name": "Cassette tapes",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-52",
+   "name": "CDs and DVDs",
+   "aliases": [],
+   "bins": [
+    "council-drop",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-53",
+   "name": "Cellophane",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider alternatives to cellophane such as fabric. Fabric is also a good choice if aiming to reuse the material for item protection.",
+   "url": null
+  },
+  {
+   "id": "bne-54",
+   "name": "Ceramics (broken)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-55",
+   "name": "Ceramics (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-56",
+   "name": "Cereal box plastic liners",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Choose products with little packaging, or packaging that can be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-57",
+   "name": "Chemicals",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-58",
+   "name": "Chip and cracker packets",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-59",
+   "name": "Chocolate and snack bar wrappers",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Plastic and foil wrappers can be disposed of in the red bin, and paper wrappers can be placed in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-60",
+   "name": "Cigarettes, cigarettes butts and cigarettes packaging",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-61",
+   "name": "Citrus bag netting",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Choose to purchase loose fruit and vegetables where possible and reuse fruit bags.",
+   "url": null
+  },
+  {
+   "id": "bne-62",
+   "name": "Clean fill or soil",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Clean fill is regarded as clean soil that does not contain any concrete, green waste or other contaminants. Council's resource recovery centres accepts residential quantities (small trailer) of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-63",
+   "name": "Cling wrap (and snack, sandwich and freezer bags)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "A great alternative to cling wrap is to use reusable containers for sandwiches and snacks.",
+   "url": null
+  },
+  {
+   "id": "bne-64",
+   "name": "Clothing and textiles (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/clothing-and-textile-recycling"
+  },
+  {
+   "id": "bne-65",
+   "name": "Clothing and textiles (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-66",
+   "name": "Coat hangers (metal)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Metal coat hangers should never go in your home yellow bin as coat hangers can severely damage the sorting machinery at material recovery facilities.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-67",
+   "name": "Coffee grounds",
+   "aliases": [],
+   "bins": [
+    "other",
+    "red-bin"
+   ],
+   "note": "Coffee grounds add organic material to the soil, which improves drainage, water retention, aeration and plant growth.",
+   "url": null
+  },
+  {
+   "id": "bne-68",
+   "name": "Coffee Pods (Aluminium)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating coffee retailer or florist to be recycled or dispose in the red bin. Consider using reusable stainless steel coffee pods or alternative coffee making methods to avoid waste.",
+   "url": null
+  },
+  {
+   "id": "bne-69",
+   "name": "Compost caddy - cream colour (Brisbane City Council supplied cream colour caddy)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "The compost caddy that is squarish and cream in colour with the white lid should be placed in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-70",
+   "name": "Compost caddy (Brisbane City Council supplied green colour caddy)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "The caddy supplied by Council is made from recycled materials (HDPE). If it breaks beyond repair, it can be recycled in your yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-71",
+   "name": "Compostable marked items",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Council does not accept any compostable packaging in the green bin. Consider reuseable containers or purchasing products that can be recycled - paper, cardboard, firm plastic, metal.",
+   "url": null
+  },
+  {
+   "id": "bne-72",
+   "name": "Computers, laptops and monitors",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-73",
+   "name": "Concrete",
+   "aliases": [],
+   "bins": [
+    "other",
+    "rrc-red"
+   ],
+   "note": "Contact a concrete recycler to dispose of large quantities of concrete or commercial waste. Council's resource recovery centres accepts small residential quantities (small ute or trailer load) of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-74",
+   "name": "Confectionary bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider purchasing confectionary with packaging that can be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-75",
+   "name": "Contact lens (contact lenses, plastic film and pods)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating optometrist to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-76",
+   "name": "Corflute Signage",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-77",
+   "name": "Corks",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Natural corks can be recycled through participating liquor retailers. Dispose of synthetic or plastic corks within the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-78",
+   "name": "Cosmetic products packaging",
+   "aliases": [],
+   "bins": [
+    "council-drop",
+    "public-drop"
+   ],
+   "note": "You can recycle empty cosmetic products packaging at one of Council’s community recycling hubs or many retailers also collect some beauty products for recycling. Consider alternatives of cosmetic product packaging that can be refilled, reused and easily recycled. Consider alternatives of beauty product packaging that can be refilled, reused and easily recycled.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
+  },
+  {
+   "id": "bne-79",
+   "name": "Cotton wool buds",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Cotton wool buds cannot be composted or recycled and must be disposed in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-80",
+   "name": "Cracker and biscuit trays",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Firm plastic cracker and biscuit trays can be recycled in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-81",
+   "name": "Curtains (poor condition",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-82",
+   "name": "Curtains (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-83",
+   "name": "Data storage devices (USBs, hard drives, CDs and DVDs and their cases)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-84",
+   "name": "Disposable paper plates",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-85",
+   "name": "Document sleeves",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider reusing as much as possible.",
+   "url": null
+  },
+  {
+   "id": "bne-86",
+   "name": "Drinking glasses",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-87",
+   "name": "Drums (metal and plastic)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Please ensure metal drums have been punctured or the lids have been removed. All drums (including plastic) must be rinsed and dry.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-88",
+   "name": "Dry cleaning solvents",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-89",
+   "name": "Dry pet food bags",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating vet clinic or pet store to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-90",
+   "name": "E-Bikes and E-Scooters",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "Contact a specialised contractor for recycling and disposal options",
+   "url": null
+  },
+  {
+   "id": "bne-91",
+   "name": "Egg cartons",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "other"
+   ],
+   "note": "Eggs cartons can also be composted at home.",
+   "url": null
+  },
+  {
+   "id": "bne-92",
+   "name": "Electric blankets",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-93",
+   "name": "Electronic waste",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-94",
+   "name": "Envelopes",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Paper envelopes can be placed in the yellow bin (even if they have a plastic window).",
+   "url": null
+  },
+  {
+   "id": "bne-95",
+   "name": "EPIRB (emergency position indicating radio beacons)",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "EPIRB batteries contain hazardous materials which should never be placed in any kerbside bin. Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": null
+  },
+  {
+   "id": "bne-96",
+   "name": "Fibre glass",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-97",
+   "name": "Fibreglass resins",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-98",
+   "name": "Fibro and wall sheeting",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply. Fibre and wall sheet must not contain asbestos.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-99",
+   "name": "Film negatives",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-100",
+   "name": "Fire extinguishers",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Gas bottles MUST NOT exceed 9kg.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-101",
+   "name": "Fishing tackle",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Take old lures, hooks, sinkers, swivels, floats, line, and line spools to a participating fishing equipment retailer to recycle or place in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-102",
+   "name": "Floor care products",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-103",
+   "name": "Floor panelling (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-104",
+   "name": "Floor panelling (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-105",
+   "name": "Flowers",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-106",
+   "name": "Fluorescent tubes and bulbs",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-107",
+   "name": "Food waste",
+   "aliases": [],
+   "bins": [
+    "other",
+    "red-bin"
+   ],
+   "note": "Reduce your unavoidable kitchen waste by transforming scraps into compost with a compost bin, worm farm or bokashi bin. Alternatively, feed food scraps to your pets or collect your scraps and contribute to a nearby community compost hub.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/food-waste"
+  },
+  {
+   "id": "bne-108",
+   "name": "Fridges",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Fridges can also be placed in your Kerbside large item collection (less than two cubic metres).",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-109",
+   "name": "Frozen food bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-110",
+   "name": "Fruit punnets (such as strawberries and raspberries punnets)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-111",
+   "name": "Fuel (petrol) containers",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-112",
+   "name": "Fungicide (insecticides)",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-113",
+   "name": "Furniture (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply. Furniture can also be placed in your Kerbside large item collection (less than two cubic metres).",
+   "url": null
+  },
+  {
+   "id": "bne-114",
+   "name": "Furniture (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Furniture can also be placed in your Kerbside large item collection (less than two cubic metres).",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-115",
+   "name": "Garden tools",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-116",
+   "name": "Garden waste",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-bins/green-waste-recycling-service"
+  },
+  {
+   "id": "bne-117",
+   "name": "Gas bottles (LPG, Butane and food grade CO2)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accepts LPG and Butane gas bottles up to 9kg only for free at the recycling facility, follow the yellow lines for correct disposal on site. Nitrous oxide cylinders and Oxy Acetylene gas bottles are hazardous waste and can only be disposed of during the free hazardous waste drop-off days at Council's resource recovery centres. Gas bottles exceeding 9kg will NOT be accepted.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-118",
+   "name": "Gas butane canisters",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Gas bottles MUST NOT exceed 9kg.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-119",
+   "name": "Gas nitrogen chargers",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "haz-days"
+   ],
+   "note": "DO NOT dispose of gas nitrogen chargers in your kerbside bins as this can cause fires in bin collection trucks. Drop off gas nitrogen chargers at a participating retailer for safe disposal. Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": null
+  },
+  {
+   "id": "bne-120",
+   "name": "Glass (poor condition - decorative or frosted, Pyrex, window, drinking glass, mirror, opal glass personal beauty products)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-121",
+   "name": "Glass (good condition - decorative or frosted, Pyrex, window, drinking glass, mirror, opal glass personal beauty products)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-122",
+   "name": "Glass bottles and jars (food and beverage)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Leave the lid on before placing in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-123",
+   "name": "Glass drink bottles",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "yellow-bin"
+   ],
+   "note": "Recycle eligible bottles at a container refund point. Council's resource recovery centres are not a container refund point.",
+   "url": null
+  },
+  {
+   "id": "bne-124",
+   "name": "Glass nail polish jars",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating beauty products retailer to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-125",
+   "name": "Glasses (reading)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating optometrist to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-126",
+   "name": "Grass clippings",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-bins/green-waste-recycling-service"
+  },
+  {
+   "id": "bne-127",
+   "name": "Hard fill (soil, concrete and masonry)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accepts this item equivalent to a utility or a trailer load for disposal in the general waste facility, follow the red lines for correct disposal. Commercial quantities of soil, concrete and masonry are NOT ACCEPTED. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-128",
+   "name": "Hard plastics (rigid plastics such as buckets, chairs, car bumpers, crates, plastic containers, plastic gardening pots and tubs.)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-129",
+   "name": "Hazardous waste",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-130",
+   "name": "Herbicides (weed killers)",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-131",
+   "name": "Hoses",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-132",
+   "name": "Hot water systems or cylinders",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-133",
+   "name": "Household appliances",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Appliances can also be placed in your Kerbside large item collection (less than two cubic metres).",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-134",
+   "name": "Ice cream containers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-135",
+   "name": "Ice cream plastic wrappers",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-136",
+   "name": "Inhalers (internal medication canister of asthma inhalers)",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "Return any used, expired, or unwanted asthma puffers and inhalers to your local pharmacy for safe recovery.",
+   "url": null
+  },
+  {
+   "id": "bne-137",
+   "name": "Inhalers (outer plastic case of asthma inhalers)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Otherwise dispose in your household red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-138",
+   "name": "Insect sprays",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-139",
+   "name": "Insulation batts",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-140",
+   "name": "Juice bottles and containers",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "yellow-bin"
+   ],
+   "note": "Recycle eligible bottles at a container refund point. Council's resource recovery centres are not a container refund point.",
+   "url": null
+  },
+  {
+   "id": "bne-141",
+   "name": "Junk mail",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-142",
+   "name": "Keyboards",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-143",
+   "name": "Laminated foil",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "DO NOT recycle if one side has printing on it. If the laminated foil is shiny and springs back when you try to scrunch it, please place it in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-144",
+   "name": "Lawn mower",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Ensure all oil and petrol is drained from the lawn mower.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-145",
+   "name": "Leaves",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-146",
+   "name": "Lids (metal jars)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Leave the lid on before placing in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-147",
+   "name": "Lids (plastic bottle top)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "red-bin"
+   ],
+   "note": "Please keep tops on bottles when placing in the yellow bin. Plastic lids on their own are too small for current recycling technology to sort, loose lids must be placed in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-148",
+   "name": "Light bulbs (halogen or incandescent)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating retailer to be recycled, or dispose in the red bin. Wrap broken light bulbs before disposing in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-149",
+   "name": "Light bulbs (LED/CFL)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-150",
+   "name": "Light bulbs and tubes (compact fluro)",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-151",
+   "name": "Lunchbox (hard plastic)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-152",
+   "name": "Magazines",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-153",
+   "name": "Masks",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-154",
+   "name": "Matchbox",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-155",
+   "name": "Mattresses",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Mattress disposal incurs a $35 recycling fee per mattress, applicable to both residential and commercial customers. You can use a waste voucher to cover the cost of mattress disposal. One voucher can be exchanged for up to 3 mattresses.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-156",
+   "name": "Meat trays (plastic)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "red-bin"
+   ],
+   "note": "Place clear and white plastic trays in your yellow bin. Black plastic trays must be disposed of in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-157",
+   "name": "Meat trays (polystyrene)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Dispose of polystyrene meat trays in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-158",
+   "name": "Medicines",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Take unwanted or expired medicines to participating pharmacies for safe disposal.",
+   "url": null
+  },
+  {
+   "id": "bne-159",
+   "name": "Metal (steel, stainless steel, tin, iron, copper, aluminium)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-160",
+   "name": "Metal polish with solvent",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-161",
+   "name": "Metals (scrap metals)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-162",
+   "name": "Microwaves",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-163",
+   "name": "Mirrors (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-164",
+   "name": "Mirrors (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-165",
+   "name": "Mobile phones",
+   "aliases": [],
+   "bins": [
+    "council-drop",
+    "public-drop",
+    "rrc-yellow"
+   ],
+   "note": "Drop off mobile phones for free at any Council library, Council's community recycling hubs, other participating mobile stores. Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Please ensure to delete sensitive data and personal information prior to recycling.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
+  },
+  {
+   "id": "bne-166",
+   "name": "Motor oil, sump oil, gear oil",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accepts this household quantities (20 litre maximum) of motor oil, sump oil, gear oil for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-167",
+   "name": "Nappies",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider using reusable nappies.",
+   "url": null
+  },
+  {
+   "id": "bne-168",
+   "name": "Nappy liners",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-169",
+   "name": "Needles and sharps",
+   "aliases": [],
+   "bins": [
+    "other",
+    "red-bin"
+   ],
+   "note": "Place needles and sharps in a sharps container and dispose of at a public hospital, participating health service or public toilets or dispose in your red bin within a solid rigid walled container.",
+   "url": null
+  },
+  {
+   "id": "bne-170",
+   "name": "Newspapers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-171",
+   "name": "Nitrous Oxide cylinders",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Council's resource recovery centres accepts LPG and Butane gas bottles up to 9kg only for free at the recycling facility, follow the yellow lines for correct disposal on site. Nitrous oxide gas bottles are hazardous waste and can only be disposed of during the free hazardous waste drop-off days at Council's resource recovery centres. Gas bottles exceeding 9kg will NOT be accepted.",
+   "url": null
+  },
+  {
+   "id": "bne-172",
+   "name": "Office furniture",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-173",
+   "name": "Oil (cooking)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "other"
+   ],
+   "note": "Council's resource recovery centres accepts this household quantities (20 litre maximum) for free at the recycling facility, follow the yellow lines for correct disposal on site. To dispose of small amounts of cooking oil, pour cooled oil in a container with secure lid and place in the red bin.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-174",
+   "name": "Oil (or patio) heaters",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accepts this household quantities (20 litre maximum) for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-175",
+   "name": "Oil (vehicle)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "other"
+   ],
+   "note": "Council's resource recovery centres accepts this household quantities (100 litre maximum) for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-176",
+   "name": "Oil can (empty)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-177",
+   "name": "Oral care",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating dentist to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-178",
+   "name": "Oven dishes (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-179",
+   "name": "Oven dishes (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-180",
+   "name": "Ovens",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-181",
+   "name": "Paddle pop sticks (wooden)",
+   "aliases": [],
+   "bins": [
+    "other",
+    "red-bin"
+   ],
+   "note": "Compost at home or dispose of in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-182",
+   "name": "Paint (water or oil based)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accepts household quantities of this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-183",
+   "name": "Paint tins (empty and dry)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "yellow-bin"
+   ],
+   "note": "Council's resource recovery centres accepts household quantities of this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-184",
+   "name": "Pallets",
+   "aliases": [],
+   "bins": [
+    "other",
+    "rrc-red"
+   ],
+   "note": "Return to contractor for reuse. Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-185",
+   "name": "Palm fronds",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-186",
+   "name": "Palm trunks",
+   "aliases": [],
+   "bins": [
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-187",
+   "name": "Paper",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-188",
+   "name": "Paper napkins, towels or serviettes",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Compost at home or dispose of in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-189",
+   "name": "Pens, markers and correction tape",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating stationery retailer to be recycled, or dispose of in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-190",
+   "name": "Petrol",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-191",
+   "name": "Phone books",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-192",
+   "name": "Photogenic chemicals",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-193",
+   "name": "Photos",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Photos contain hazardous chemicals. Only photos printed on computer paper can be placed in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-194",
+   "name": "Picture frames (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-195",
+   "name": "Picture frames (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-196",
+   "name": "Pillows",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-197",
+   "name": "Pizza boxes",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": null
+  },
+  {
+   "id": "bne-198",
+   "name": "Plant pots",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Continue to reuse if in good condition. Plant pots can be taken to a participating hardware store or nursery to be recycled or placed in the red bin. DO NOT place in your kerbside green or yellow bins.",
+   "url": null
+  },
+  {
+   "id": "bne-199",
+   "name": "Plants (small)",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-200",
+   "name": "Plastic and biodegradable fresh produce bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Prioritise buying produce loose or bringing a reusable bag to avoid single use plastic bag. Plastic bags can also be used as dog poo bags.",
+   "url": null
+  },
+  {
+   "id": "bne-201",
+   "name": "Plastic bottles (cleaning bottles, clear bottles and jars, opaque milk bottle, and shampoo bottles)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-202",
+   "name": "Plastic credit cards and alike",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "public-drop"
+   ],
+   "note": "Dispose of plastic cards in your red bin (ensure cards are cut up into pieces to protect sensitive information) or search online to find a safe disposal location.",
+   "url": null
+  },
+  {
+   "id": "bne-203",
+   "name": "Plastic cutlery",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider using alternatives such as BYO reusable cutlery.",
+   "url": null
+  },
+  {
+   "id": "bne-204",
+   "name": "Plastic straws",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider drinking without a straw or use paper straws.",
+   "url": null
+  },
+  {
+   "id": "bne-205",
+   "name": "Plastic takeaway containers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-206",
+   "name": "Plastic wrap low density polyethylene (LDPE)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-207",
+   "name": "Polystyrene (small balls)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accepts this item (bagged) for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-208",
+   "name": "Polystyrene (large blocks)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accepts up to 5 cubic metres of this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Quantities exceeding 5 cubic metres will need to be disposed of as general waste and fees will apply. Cubes must be clean and free from paint and glue. Polystyrene dust and beans are not accepted for recycling.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-209",
+   "name": "Pool covers",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-210",
+   "name": "Printer and ink cartridges",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating electronic goods retailer to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-211",
+   "name": "Prunings (shrubs)",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-212",
+   "name": "Pyrex glass",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-213",
+   "name": "Radiators",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. All liquids (including oil) must be drained prior to drop off.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-214",
+   "name": "Rags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider reusing or repurposing textiles before disposing in red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-215",
+   "name": "Receipts",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-216",
+   "name": "Remote controls",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-217",
+   "name": "Rocks",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "DO NOT place rocks in any of your kerbside bins. If the rocks are in good condition contact a landscaping service to collect.",
+   "url": null
+  },
+  {
+   "id": "bne-218",
+   "name": "Roll on tube (deodorant or sunscreen)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-219",
+   "name": "Rubber matting",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-220",
+   "name": "Rubber, rubber gloves, rubber bands",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-221",
+   "name": "Sand",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "DO NOT place sand in any of your kerbside bins. If the sand is in good condition consider selling or giving away or contact a rubbish removal service or participating landscaping service to collect. It is illegal to dump products containing asbestos in any household kerbside bin, business bins, Council’s resource recovery centres, public place bins, or any public place. Contact a licensed contractor for asbestos removal and treatment.",
+   "url": null
+  },
+  {
+   "id": "bne-222",
+   "name": "Sanitary products",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "DO NOT flush down the toilet.",
+   "url": null
+  },
+  {
+   "id": "bne-223",
+   "name": "Sealers, silicones and builder fillers",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-224",
+   "name": "Sheets and towels",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Consider donating sheets and towels in good condition to an animal shelter or a local charity. Sheets and towels in unusable condition can be dropped off at a participating linen retailer to be recycled, or dispose in the red bin.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-225",
+   "name": "Shoes (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-226",
+   "name": "Shoes (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Ensure batteries are removed.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-227",
+   "name": "Shopping bags (plastic)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Consider using alternatives such as reusable quality shopping bags or quality made from recycled materials.",
+   "url": null
+  },
+  {
+   "id": "bne-228",
+   "name": "Shredded paper",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Place inside a cardboard box when recycling. It's too small for recycling machines to sort. Shredded paper can also be composted at home.",
+   "url": null
+  },
+  {
+   "id": "bne-229",
+   "name": "Silicone",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-230",
+   "name": "Smoke alarms (detectors)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Ensure batteries are removed.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-231",
+   "name": "Snaplock or Ziplock bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-232",
+   "name": "Soft plastic",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-233",
+   "name": "Solar batteries",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-234",
+   "name": "Solar panels",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-235",
+   "name": "Soy fish shaped bottles",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-236",
+   "name": "Sporting goods (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-237",
+   "name": "Sporting goods (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-238",
+   "name": "Spray triggers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Please ensure to keep the spray trigger attached to the bottle and recycle together.",
+   "url": null
+  },
+  {
+   "id": "bne-239",
+   "name": "Squeeze pouches (baby food, yoghurt, fruit)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-240",
+   "name": "Steel",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-241",
+   "name": "Sticks, twigs and branches",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-242",
+   "name": "Sticky notes",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-243",
+   "name": "Sticky tape",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-244",
+   "name": "Stones",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "DO NOT place stones in any of your kerbside bins. If the stones are in good condition contact a landscaping service to collect",
+   "url": null
+  },
+  {
+   "id": "bne-245",
+   "name": "Swimming pool chemicals",
+   "aliases": [],
+   "bins": [
+    "haz-days"
+   ],
+   "note": "Brisbane residents can dispose of hazardous waste during free hazardous waste drop-off days at Council's resource recovery centres.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/reducing-waste-at-home/hazardous-waste-disposal"
+  },
+  {
+   "id": "bne-246",
+   "name": "Syringes",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off syringes in a sharps container and dispose of at a public hospital, participating health service or dispose in your red bin within a solid rigid walled container.",
+   "url": null
+  },
+  {
+   "id": "bne-247",
+   "name": "Takeaway coffee cups",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating convenience store or cafe to be recycled, or dispose of the cup and lid in the red bin. Consider investing in a reusable coffee cup and avoid single-use cups.",
+   "url": null
+  },
+  {
+   "id": "bne-248",
+   "name": "Takeaway coffee cups (BioPak cups and containers)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating convenience store or cafe to be recycled, or dispose of the cup and lid in the red bin. Consider investing in a reusable coffee cup and avoid single-use cups.",
+   "url": null
+  },
+  {
+   "id": "bne-249",
+   "name": "Takeaway food container (plastic)",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-250",
+   "name": "Tarpaulins (tarps)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-251",
+   "name": "Tea bag foil wrapper",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-252",
+   "name": "Tea bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Tea bags can be composted (if no plastic is present) or placed in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-253",
+   "name": "Televisions",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-254",
+   "name": "Tetra Pak (flavoured milk, pure fruit poppers)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Eligible flavoured milk and fruit juice Tetra Pak poppers (between 150ml and 750ml) are accepted at container refund points. Dispose of larger Tetra Pak containers in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-255",
+   "name": "Thermometers",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-256",
+   "name": "Tiles (including ceramic)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-257",
+   "name": "Timber (building timber and pallets)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-258",
+   "name": "Tissues",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-259",
+   "name": "Toilet paper rolls",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "other"
+   ],
+   "note": "Consider composting your toilet paper rolls",
+   "url": null
+  },
+  {
+   "id": "bne-260",
+   "name": "Toothpaste or soft tubes (HDPE)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "note": "Drop off at a participating dentist to be recycled, or dispose in the red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-261",
+   "name": "Toys",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-262",
+   "name": "Tree stumps",
+   "aliases": [],
+   "bins": [
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item as green waste, follow the green lines for correct disposal. Fees apply. NOTE: tree stumps over 50cm in diameter are not accepted due to mulching requirements.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-263",
+   "name": "Tupperware",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-264",
+   "name": "Tyres",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "Speak to your local tyre service for participating recycling locations. Tyres are NOT ACCEPTED at Council's resource recovery centres or Kerbside large item collection.",
+   "url": null
+  },
+  {
+   "id": "bne-265",
+   "name": "Umbrellas",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-266",
+   "name": "Vape pods or e-liquid bottles",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-267",
+   "name": "Vapes or e-cigarettes",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "public-drop"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-268",
+   "name": "Video cassettes (VHS) (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-269",
+   "name": "Video cassettes (VHS) (good condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-270",
+   "name": "Vines",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-271",
+   "name": "Vinyl floor covering",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-272",
+   "name": "Vinyl records",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-273",
+   "name": "Vitamin bottle",
+   "aliases": [],
+   "bins": [
+    "yellow-bin",
+    "red-bin"
+   ],
+   "note": "Keep lids on when recycling. If the vitamin bottle is LDPE or soft plastic, please dispose of in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-274",
+   "name": "Water bottle (hard plastic reuseable water bottle)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-275",
+   "name": "Water bottle (single use)",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "yellow-bin"
+   ],
+   "note": "Recycle eligible bottles at a container refund point. Council's resource recovery centres are not a container refund point.",
+   "url": null
+  },
+  {
+   "id": "bne-276",
+   "name": "Wax boxes",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-277",
+   "name": "Weeds",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Noxious weeds are accepted as the processing destroys seeds within the final composted material. Council's resource recovery centres accept this item as green waste, follow the green lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-278",
+   "name": "Wetsuits",
+   "aliases": [],
+   "bins": [
+    "other"
+   ],
+   "note": "Drop off at a participating surfing retailer to be recycled.",
+   "url": null
+  },
+  {
+   "id": "bne-279",
+   "name": "Whipped cream cans",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": "Separate the cans and lids before disposing in the yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-280",
+   "name": "White goods (fridge, freezers, washing machines, clothes dryers)",
+   "aliases": [],
+   "bins": [
+    "rrc-yellow",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. White goods can also be placed in your Kerbside large item collection (less than two cubic metres).",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-281",
+   "name": "Window glass",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-282",
+   "name": "Windscreen glass",
+   "aliases": [],
+   "bins": [
+    "red-bin",
+    "rrc-red"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": null
+  },
+  {
+   "id": "bne-283",
+   "name": "Wine bottles",
+   "aliases": [],
+   "bins": [
+    "public-drop",
+    "yellow-bin"
+   ],
+   "note": "Recycle eligible bottles at a container refund point. Council's resource recovery centres are not a container refund point.",
+   "url": null
+  },
+  {
+   "id": "bne-284",
+   "name": "Wine cask or water bladders",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-285",
+   "name": "Wipes",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "DO NOT flush wipes down the toilet, even if the packaging says it is possible to do so. Wipes are not compostable or biodegradable and cannot be composted.",
+   "url": null
+  },
+  {
+   "id": "bne-286",
+   "name": "Wood (treated)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "kerb-large"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-287",
+   "name": "Wood (untreated)",
+   "aliases": [],
+   "bins": [
+    "green-bin",
+    "rrc-green"
+   ],
+   "note": "Council's resource recovery centres accepts residential quantities of this item as green waste, follow the green lines for correct disposal. Fees apply and product will be assessed before accepted as untreated timber.",
+   "url": null
+  },
+  {
+   "id": "bne-288",
+   "name": "Wooden sticks (shish kebab)",
+   "aliases": [],
+   "bins": [
+    "other",
+    "red-bin"
+   ],
+   "note": "Compost at home or dispose of in your red bin.",
+   "url": null
+  },
+  {
+   "id": "bne-289",
+   "name": "Wrapping paper (foil and plastic coated)",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": "Continue to reuse if in good condition and then dispose of in the red bin. Wrapping paper made from paper can be recycled in your yellow bin.",
+   "url": null
+  },
+  {
+   "id": "bne-290",
+   "name": "X-rays",
+   "aliases": [],
+   "bins": [
+    "council-drop",
+    "public-drop"
+   ],
+   "note": "You can recycle X-rays at one of Council’s community recycling hubs or search online to find a participating recycling location. You can also dispose of X-rays in your red bin.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
+  },
+  {
+   "id": "bne-291",
+   "name": "Yoga mats (poor condition)",
+   "aliases": [],
+   "bins": [
+    "rrc-red",
+    "red-bin"
+   ],
+   "note": "Council's resource recovery centres accept this item for disposal in the general waste facility, follow the red lines for correct disposal. Fees apply.",
+   "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/resource-recovery-centres"
+  },
+  {
+   "id": "bne-292",
+   "name": "Yoghurt containers",
+   "aliases": [],
+   "bins": [
+    "yellow-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-293",
+   "name": "Yoghurt pouches",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  },
+  {
+   "id": "bne-294",
+   "name": "Ziplock bags",
+   "aliases": [],
+   "bins": [
+    "red-bin"
+   ],
+   "note": null,
+   "url": null
+  }
+ ]
+}
