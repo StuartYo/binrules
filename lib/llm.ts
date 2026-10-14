@@ -2,7 +2,7 @@
 // The key is read from NEBIUS_API_KEY and is never logged or returned.
 
 export const NEBIUS_BASE_URL = process.env.NEBIUS_BASE_URL || "https://api.tokenfactory.nebius.com/v1/";
-export const DEFAULT_MODEL = process.env.BINRULES_MODEL || "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B";
+export const DEFAULT_MODEL = process.env.BINRULES_MODEL || "nvidia/nemotron-3-super-120b-a12b";
 
 /** USD per million tokens [input, output], from the Token Factory catalog (checked 2026-10-14). */
 export const PRICES: Record<string, [number, number]> = {

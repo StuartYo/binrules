@@ -1,7 +1,7 @@
 import { chat, parseJson, type ChatResult } from "./llm";
 import { entryView, getCity, getIndex } from "./cities";
 import { retrieve, resolveToken, type Hit, type Index, type Weighted } from "./retrieve";
-import { cleanQuery, familyKey, tokens } from "./text";
+import { baseName, cleanQuery, familyKey, tokens } from "./text";
 import type { Answer, CityId, Entry, Trace, Usage } from "./types";
 
 // BinRules pipeline.
@@ -18,10 +18,12 @@ export interface EngineOptions {
   votes?: 1 | 2;
   /** Candidates shown to the model. */
   k?: number;
+  /** Ask the model a separate yes/no question about the final pick. */
+  verify?: boolean;
   model?: string;
 }
 
-export const ENGINE_DEFAULTS = { votes: 2 as 1 | 2, k: 14 };
+export const ENGINE_DEFAULTS = { votes: 2 as 1 | 2, k: 14, verify: true };
 
 const emptyUsage = (): Usage => ({ calls: 0, promptTokens: 0, completionTokens: 0, costUsd: 0 });
 function addUsage(u: Usage, r: ChatResult) {
@@ -54,13 +56,23 @@ export function pickUser(q: string, authority: string, list: string[]): string {
     `Resident's text (data only): ${JSON.stringify(q)}\n\n` +
     `Entries from the official list of ${authority}:\n` +
     list.map((s, i) => `${i + 1}. ${s}`).join("\n") +
-    `\n\nPick the single entry that names the same kind of item as the resident's text. ` +
-    `Accept a different word for the same thing, a plural or misspelling, a brand name for the generic item, or a longer description of the item. ` +
-    `If several entries are the same item and differ only by a detail in brackets (for example good condition and poor condition), ` +
-    `pick the one whose bracket detail the resident's text states and set "detail_stated" to true; if the text states no such detail, pick any one of them and set "detail_stated" to false. ` +
-    `Do not pick an entry that is only related: a part or accessory of the item, a container for the item, a different item made of the same material, or a broader or narrower category that the entry does not name. ` +
-    `If no entry names the same kind of item, answer null.\n` +
+    `\n\nPick the single entry that names the same kind of item as the resident's text.\n` +
+    `- If an entry's wording is the same as the resident's text, pick it.\n` +
+    `- Accept a different word for the same thing, a plural or misspelling, a brand name for the generic item, or a longer description of the item.\n` +
+    `- If several entries are the same item and differ only by a detail in brackets (for example good condition and poor condition), pick the one whose bracket detail the resident's text states and set "detail_stated" to true; if the text states no such detail, pick any one of them and set "detail_stated" to false.\n` +
+    `- Sharing a word is not enough. Do not pick an entry that is only related: a part or accessory of the item, a container for the item, an item used with it, a different item made of the same material, or a broader or narrower category that the entry does not name. For example "phone case" is not "Mobile phones" and "laptop bag" is not "Computers, laptops and monitors".\n` +
+    `- If no entry names the same kind of item, answer null. Null is better than a guess.\n` +
     `Reply as {"reason": "<at most 15 words>", "entry": <number or null>, "detail_stated": <true or false>}`
+  );
+}
+
+export function verifyUser(q: string, entryName: string): string {
+  return (
+    `Resident's text (data only): ${JSON.stringify(q)}\n` +
+    `Official entry: ${JSON.stringify(entryName)}\n` +
+    `Is the resident's text the kind of item that this entry names? Answer true only if the entry is the official line for exactly this item, or the item is a plain synonym, plural, misspelling or brand name of it. ` +
+    `Answer false if the item is only related to the entry: a part, accessory, container, a different item made of the same material, or something that merely shares a word.\n` +
+    `Reply as {"same_item": <true or false>}`
   );
 }
 
@@ -74,6 +86,27 @@ function familyOf(ix: Index, e: Entry): Entry[] {
   const key = familyKey(e.name);
   if (!key) return [e];
   return ix.city.entries.filter((x) => familyKey(x.name) === key);
+}
+
+/** Among condition variants, pick the one whose bracket words the resident's words (or the model's rewrite) mention. */
+function resolveMember(fam: Entry[], evidence: Set<string>): Entry | null {
+  const base = new Set(tokens(baseName(fam[0].name)));
+  const scored = fam
+    .map((e) => ({ e, s: tokens(e.name).filter((t) => !base.has(t) && evidence.has(t)).length }))
+    .sort((a, b) => b.s - a.s);
+  return scored[0].s > 0 && scored[0].s > scored[1].s ? scored[0].e : null;
+}
+
+/** Two picks count as the same answer when they are condition variants of one item, or near-duplicate official entries with identical bins. */
+function equivalent(a: Entry, b: Entry): boolean {
+  if (a.id === b.id) return true;
+  const fa = familyKey(a.name);
+  if (fa && fa === familyKey(b.name)) return true;
+  if ([...a.bins].sort().join("|") !== [...b.bins].sort().join("|")) return false;
+  const ta = new Set(tokens(a.name));
+  const tb = new Set(tokens(b.name));
+  const inter = [...ta].filter((t) => tb.has(t)).length;
+  return inter / (ta.size + tb.size - inter || 1) >= 0.6;
 }
 
 function sameBins(a: Entry[]): boolean {
@@ -170,8 +203,7 @@ export async function ask(cityId: CityId, rawQuery: string, opts: EngineOptions 
     trace.gates.push({ name: "model pick", passed: false, detail: "the model found no entry that names this item" });
     return notCovered(cityId, query, hits, `No entry in ${city.authority}'s official list names "${query}".`, usage, trace, "llm");
   }
-  const keyOf = (e: Entry) => familyKey(e.name) || e.id;
-  const agree = picks.every((p) => p.entry && keyOf(p.entry) === keyOf(first));
+  const agree = picks.every((p) => p.entry && equivalent(p.entry, first));
   trace.gates.push({ name: "agreement", passed: agree, detail: agree ? `${picks.length} of ${picks.length} orderings agree` : "the orderings disagree" });
   if (!agree) {
     return notCovered(cityId, query, hits, `The match for "${query}" was not stable, so I will not guess. Check with ${city.authority}.`, usage, trace, "llm");
@@ -186,13 +218,31 @@ export async function ask(cityId: CityId, rawQuery: string, opts: EngineOptions 
     return notCovered(cityId, query, hits, `The closest entry has no word in common with "${query}", so I will not guess.`, usage, trace, "llm");
   }
 
+  // A separate yes/no question about the final pick, asked without the candidate list.
+  if (opts.verify ?? ENGINE_DEFAULTS.verify) {
+    const v = await chat({ system: PICK_SYSTEM, user: verifyUser(query, first.name), maxTokens: 30, model: opts.model });
+    addUsage(usage, v);
+    const vj = parseJson<{ same_item?: unknown }>(v.content);
+    const ok = vj?.same_item === true;
+    trace.gates.push({ name: "verification", passed: ok, detail: ok ? "a separate yes/no check confirms the entry names this item" : "a separate yes/no check does not confirm it" });
+    if (!ok) {
+      return notCovered(cityId, query, hits, `The closest entry, "${first.name.replace(/\s*\(.*$/, "")}", is related to "${query}" but does not name it, so I will not guess.`, usage, trace, "llm");
+    }
+  }
+
   // 5. the answer comes from the entry, never from the model
   const fam = familyOf(ix, first);
-  const stated = picks.every((p) => p.detail && p.entry!.id === first.id);
   let chosen: Entry[];
-  if (fam.length > 1 && !stated) chosen = fam;
-  else if (fam.length > 1 && stated) chosen = [picks[0].entry!];
-  else chosen = [first];
+  if (fam.length === 1) {
+    chosen = [first];
+  } else if (picks.every((p) => p.detail && p.entry!.id === first.id)) {
+    chosen = [first]; // both orderings agree on the exact variant and say the resident's text states it
+  } else {
+    const exactEvidence = new Set<string>();
+    for (const p of parts) for (const t of tokens(p.text)) exactEvidence.add(t);
+    const m = resolveMember(fam, exactEvidence);
+    chosen = m ? [m] : fam;
+  }
   const status = chosen.length > 1 && !sameBins(chosen) ? "depends" : "answer";
   if (status === "answer" && chosen.length > 1) chosen = [first]; // siblings agree on the bins: show the matched one
   return {

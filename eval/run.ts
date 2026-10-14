@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { execSync } from "node:child_process";
-import { ask, ENGINE_DEFAULTS, EXPAND_SYSTEM, expandUser, PICK_SYSTEM, pickUser } from "../lib/engine";
+import { ask, ENGINE_DEFAULTS, EXPAND_SYSTEM, expandUser, PICK_SYSTEM, pickUser, verifyUser } from "../lib/engine";
 import { askModelAlone, BASELINE_SYSTEM } from "../lib/baseline";
 import { DEFAULT_MODEL, setGuard } from "../lib/llm";
 import { getCity } from "../lib/cities";
@@ -26,6 +26,7 @@ const systems = (arg("systems", "binrules,model") as string).split(",") as Syste
 const sample = arg("sample") ? Number(arg("sample")) : undefined;
 const votes = (Number(arg("votes", String(ENGINE_DEFAULTS.votes))) as 1 | 2);
 const k = Number(arg("k", String(ENGINE_DEFAULTS.k)));
+const verify = arg("verify", String(ENGINE_DEFAULTS.verify)) === "true";
 const model = arg("model", DEFAULT_MODEL)!;
 const budget = Number(arg("budget", "0.3"));
 const conc = Number(arg("concurrency", "5"));
@@ -56,8 +57,9 @@ function configHash(): string {
     expandUser("Q"),
     PICK_SYSTEM,
     pickUser("Q", "A", ["x", "y"]),
+    verifyUser("Q", "E"),
     BASELINE_SYSTEM("c", "a", ["o"]),
-    JSON.stringify({ votes, k, model }),
+    JSON.stringify({ votes, k, verify, model }),
     fs.readFileSync(path.join(__dirname, "..", "lib", "retrieve.ts"), "utf8"),
     fs.readFileSync(path.join(__dirname, "..", "lib", "text.ts"), "utf8"),
   ];
@@ -98,7 +100,7 @@ async function main() {
   if (limit) cases = cases.slice(0, limit);
   const jobs: { c: Case; system: System }[] = [];
   for (const c of cases) for (const s of systems) jobs.push({ c, system: s });
-  console.log(`${label}: ${cases.length} cases x ${systems.join("+")} = ${jobs.length} jobs, model ${model}, votes ${votes}, k ${k}, budget $${budget}`);
+  console.log(`${label}: ${cases.length} cases x ${systems.join("+")} = ${jobs.length} jobs, model ${model}, votes ${votes}, k ${k}, verify ${verify}, budget $${budget}`);
 
   const rows: Row[] = new Array(jobs.length);
   let next = 0;
@@ -113,7 +115,7 @@ async function main() {
     for (let attempt = 0; attempt < 2; attempt++) {
       try {
         if (j.system === "binrules") {
-          const a = await ask(city, j.c.q, { without: j.c.without ? new Set(j.c.without) : undefined, votes, k, model });
+          const a = await ask(city, j.c.q, { without: j.c.without ? new Set(j.c.without) : undefined, votes, k, verify, model });
           row.status = a.status;
           row.entries = a.entries.map((e) => e.id);
           row.entryBins = [...new Set(a.entries.flatMap((e) => e.bins.map((b) => b.code)))];
@@ -151,7 +153,7 @@ async function main() {
 
   const errors = rows.filter((r) => r.err).length;
   const meta = {
-    label, city, split, sets, systems, sample: sample ?? null, model, votes, k,
+    label, city, split, sets, systems, sample: sample ?? null, model, votes, k, verify,
     createdAt: new Date().toISOString(),
     configHash: configHash(),
     casesHash: casesHash(city),

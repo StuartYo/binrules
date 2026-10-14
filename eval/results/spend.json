@@ -1,0 +1,62 @@
+{
+ "projectCapUsd": 2,
+ "evalStopUsd": 1.2,
+ "runs": [
+  {
+   "ts": "2026-10-14T03:18:00.579Z",
+   "label": "day1-baseline-dev",
+   "usd": 0.004574,
+   "calls": 165,
+   "promptTokens": 55265,
+   "completionTokens": 5244
+  },
+  {
+   "ts": "2026-10-14T03:18:59.918Z",
+   "label": "day1-baseline-test",
+   "usd": 0.011048,
+   "calls": 398,
+   "promptTokens": 133342,
+   "completionTokens": 12699
+  },
+  {
+   "ts": "2026-10-14T03:20:38.878Z",
+   "label": "dev-1",
+   "usd": 0.012835,
+   "calls": 479,
+   "promptTokens": 147613,
+   "completionTokens": 16577
+  },
+  {
+   "ts": "2026-10-14T03:23:13.273Z",
+   "label": "dev-2-super",
+   "usd": 0.056465,
+   "calls": 481,
+   "promptTokens": 148985,
+   "completionTokens": 13077
+  },
+  {
+   "ts": "2026-10-14T03:25:45.574Z",
+   "label": "dev-3-super",
+   "usd": 0.06358,
+   "calls": 481,
+   "promptTokens": 172201,
+   "completionTokens": 13244
+  },
+  {
+   "ts": "2026-10-14T03:28:29.788Z",
+   "label": "dev-4-verify",
+   "usd": 0.073436,
+   "calls": 623,
+   "promptTokens": 202192,
+   "completionTokens": 14198
+  },
+  {
+   "ts": "2026-10-14T03:30:41.883Z",
+   "label": "dev-5-equiv",
+   "usd": 0.073462,
+   "calls": 621,
+   "promptTokens": 202433,
+   "completionTokens": 14147
+  }
+ ]
+}
