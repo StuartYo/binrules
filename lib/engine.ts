@@ -181,13 +181,18 @@ export async function ask(cityId: CityId, rawQuery: string, opts: EngineOptions 
   const orderings: { name: string; hits: Hit[] }[] = [{ name: "by relevance", hits }];
   if (votesWanted === 2) orderings.push({ name: "reversed", hits: [...hits].reverse() });
   const picks: { entry: Entry | null; detail: boolean }[] = [];
-  for (const o of orderings) {
-    const r = await chat({
-      system: PICK_SYSTEM,
-      user: pickUser(query, city.authority, o.hits.map((h) => entryLabel(h.entry))),
-      maxTokens: 90,
-      model: opts.model,
-    });
+  const replies = await Promise.all(
+    orderings.map((o) =>
+      chat({
+        system: PICK_SYSTEM,
+        user: pickUser(query, city.authority, o.hits.map((h) => entryLabel(h.entry))),
+        maxTokens: 90,
+        model: opts.model,
+      }),
+    ),
+  );
+  orderings.forEach((o, idx) => {
+    const r = replies[idx];
     addUsage(usage, r);
     const j = parseJson<{ entry?: unknown; detail_stated?: unknown }>(r.content);
     const n = typeof j?.entry === "number" ? j.entry : typeof j?.entry === "string" ? Number(j.entry) : NaN;
@@ -195,7 +200,7 @@ export async function ask(cityId: CityId, rawQuery: string, opts: EngineOptions 
     const detail = j?.detail_stated === true;
     picks.push({ entry, detail });
     trace.votes.push({ order: o.name, pick: entry ? entry.id : null, variantStated: detail });
-  }
+  });
 
   // 4. checks (code)
   const first = picks[0].entry;
@@ -238,9 +243,8 @@ export async function ask(cityId: CityId, rawQuery: string, opts: EngineOptions 
   } else if (picks.every((p) => p.detail && p.entry!.id === first.id)) {
     chosen = [first]; // both orderings agree on the exact variant and say the resident's text states it
   } else {
-    const exactEvidence = new Set<string>();
-    for (const p of parts) for (const t of tokens(p.text)) exactEvidence.add(t);
-    const m = resolveMember(fam, exactEvidence);
+    // Only the resident's own words may pick a variant. The model's rewrites can invent details ("greasy pizza box").
+    const m = resolveMember(fam, new Set(tokens(query)));
     chosen = m ? [m] : fam;
   }
   const status = chosen.length > 1 && !sameBins(chosen) ? "depends" : "answer";

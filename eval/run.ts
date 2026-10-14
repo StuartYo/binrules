@@ -36,7 +36,7 @@ const out = arg("out", path.join("eval", "results", `scratch-${label}.json`))!;
 
 const SPEND = path.join(__dirname, "results", "spend.json");
 const PROJECT_CAP = 2.0;
-const EVAL_STOP = 1.2; // eval never spends past this; the rest is the public demo's allowance
+const EVAL_STOP = 1.35; // eval never spends past this; the rest is the public demo's allowance
 
 interface SpendFile {
   projectCapUsd: number;

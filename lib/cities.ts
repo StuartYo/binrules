@@ -43,3 +43,19 @@ export function entryView(city: CityData, e: Entry): EntryView {
     url: e.url,
   };
 }
+
+/** Where a reader can verify an entry at the source. */
+export function sourceLinks(city: CityData, e: { id: string; url: string | null }): { label: string; href: string }[] {
+  const links: { label: string; href: string }[] = [];
+  if (e.url) links.push({ label: `${city.authority} page`, href: e.url });
+  if (city.city === "brisbane") {
+    const idx = e.id.replace("bne-", "");
+    links.push({
+      label: "Official record (open data JSON)",
+      href: `https://data.brisbane.qld.gov.au/api/explore/v2.1/catalog/datasets/what-goes-in-my-bin/records?where=index%3D%22${idx}%22`,
+    });
+  } else {
+    links.push({ label: "Toronto Waste Wizard", href: city.source.councilUrl });
+  }
+  return links;
+}

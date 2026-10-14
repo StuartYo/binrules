@@ -1,0 +1,1166 @@
+{
+ "brisbane|pizza box": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "pizza box",
+   "entries": [
+    {
+     "id": "bne-197",
+     "name": "Pizza boxes",
+     "bins": [
+      {
+       "code": "yellow-bin",
+       "label": "Yellow bin",
+       "tone": "yellow",
+       "description": "Recycling kerbside bin (yellow lid)."
+      },
+      {
+       "code": "rrc-yellow",
+       "label": "Resource recovery centre, yellow line",
+       "tone": "yellow",
+       "description": "Council resource recovery centre: recyclables accepted at the yellow lines, usually free."
+      }
+     ],
+     "note": "Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Pizza boxes\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1371,
+    "completionTokens": 101,
+    "costUsd": 0.0005022
+   },
+   "trace": {
+    "expansions": [
+     "pizza box",
+     "cardboard pizza container",
+     "takeout pizza box",
+     "food delivery box",
+     "corrugated pizza tray"
+    ],
+    "candidates": [
+     {
+      "id": "bne-197",
+      "name": "Pizza boxes",
+      "score": 12.59
+     },
+     {
+      "id": "bne-249",
+      "name": "Takeaway food container (plastic)",
+      "score": 6.27
+     },
+     {
+      "id": "bne-276",
+      "name": "Wax boxes",
+      "score": 5.83
+     },
+     {
+      "id": "bne-56",
+      "name": "Cereal box plastic liners",
+      "score": 4.9
+     },
+     {
+      "id": "bne-205",
+      "name": "Plastic takeaway containers",
+      "score": 4.57
+     },
+     {
+      "id": "bne-248",
+      "name": "Takeaway coffee cups (BioPak cups and containers)",
+      "score": 3.67
+     },
+     {
+      "id": "bne-45",
+      "name": "Cardboard (non-waxed)",
+      "score": 2.86
+     },
+     {
+      "id": "bne-46",
+      "name": "Cardboard (plasticised or waxed)",
+      "score": 2.86
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-197",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-197",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"pizza\", \"box\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Yellow bin",
+   "binCode": "yellow-bin",
+   "why": "Clean pizza boxes can be recycled; greasy parts go in red bin.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 333,
+    "completionTokens": 28,
+    "costUsd": 0.0001251
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|takeaway coffee cup": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "takeaway coffee cup",
+   "entries": [
+    {
+     "id": "bne-247",
+     "name": "Takeaway coffee cups",
+     "bins": [
+      {
+       "code": "public-drop",
+       "label": "Public drop off points",
+       "tone": "blue",
+       "description": "Container refund points, participating retailers, pharmacies and similar public drop-off locations."
+      },
+      {
+       "code": "red-bin",
+       "label": "Red bin",
+       "tone": "red",
+       "description": "General waste kerbside bin (red lid)."
+      }
+     ],
+     "note": "Drop off at a participating convenience store or cafe to be recycled, or dispose of the cup and lid in the red bin. Consider investing in a reusable coffee cup and avoid single-use cups.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Takeaway coffee cups\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1366,
+    "completionTokens": 88,
+    "costUsd": 0.0004890000000000001
+   },
+   "trace": {
+    "expansions": [
+     "coffee cup",
+     "disposable coffee cup",
+     "paper coffee cup",
+     "to-go coffee cup",
+     "single-use coffee cup"
+    ],
+    "candidates": [
+     {
+      "id": "bne-247",
+      "name": "Takeaway coffee cups",
+      "score": 15.14
+     },
+     {
+      "id": "bne-248",
+      "name": "Takeaway coffee cups (BioPak cups and containers)",
+      "score": 14.02
+     },
+     {
+      "id": "bne-275",
+      "name": "Water bottle (single use)",
+      "score": 5.86
+     },
+     {
+      "id": "bne-67",
+      "name": "Coffee grounds",
+      "score": 5.36
+     },
+     {
+      "id": "bne-84",
+      "name": "Disposable paper plates",
+      "score": 5.3
+     },
+     {
+      "id": "bne-68",
+      "name": "Coffee Pods (Aluminium)",
+      "score": 4.85
+     },
+     {
+      "id": "bne-205",
+      "name": "Plastic takeaway containers",
+      "score": 4.85
+     },
+     {
+      "id": "bne-249",
+      "name": "Takeaway food container (plastic)",
+      "score": 4.47
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-247",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-247",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"takeaway\", \"coffee\", \"cup\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Red bin",
+   "binCode": "red-bin",
+   "why": "Takeaway cups have plastic lining; not recyclable in yellow bin.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 334,
+    "completionTokens": 28,
+    "costUsd": 0.0001254
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|yoghurt tub": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "yoghurt tubs",
+   "entries": [
+    {
+     "id": "bne-292",
+     "name": "Yoghurt containers",
+     "bins": [
+      {
+       "code": "yellow-bin",
+       "label": "Yellow bin",
+       "tone": "yellow",
+       "description": "Recycling kerbside bin (yellow lid)."
+      }
+     ],
+     "note": null,
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Yoghurt containers\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1430,
+    "completionTokens": 110,
+    "costUsd": 0.000528
+   },
+   "trace": {
+    "expansions": [
+     "yogurt container",
+     "yogurt cup",
+     "yogurt pot",
+     "dairy tub",
+     "plastic yogurt tub"
+    ],
+    "candidates": [
+     {
+      "id": "bne-292",
+      "name": "Yoghurt containers",
+      "score": 9.2
+     },
+     {
+      "id": "bne-128",
+      "name": "Hard plastics (rigid plastics such as buckets, chairs, car bumpers, crates, plastic containers, plastic gardening pots and tubs.)",
+      "score": 8.16
+     },
+     {
+      "id": "bne-248",
+      "name": "Takeaway coffee cups (BioPak cups and containers)",
+      "score": 5.85
+     },
+     {
+      "id": "bne-293",
+      "name": "Yoghurt pouches",
+      "score": 5.83
+     },
+     {
+      "id": "bne-205",
+      "name": "Plastic takeaway containers",
+      "score": 4.61
+     },
+     {
+      "id": "bne-239",
+      "name": "Squeeze pouches (baby food, yoghurt, fruit)",
+      "score": 4.3
+     },
+     {
+      "id": "bne-249",
+      "name": "Takeaway food container (plastic)",
+      "score": 4.26
+     },
+     {
+      "id": "bne-198",
+      "name": "Plant pots",
+      "score": 3.12
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-292",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-292",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"yoghurt\", \"container\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Yellow bin",
+   "binCode": "yellow-bin",
+   "why": "Yoghurt tubs made of plastic can be rinsed and placed in the yellow recycling bin.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 335,
+    "completionTokens": 32,
+    "costUsd": 0.0001293
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|iphone": {
+  "answer": {
+   "status": "answer",
+   "city": "brisbane",
+   "query": "old iPhone",
+   "entries": [
+    {
+     "id": "bne-165",
+     "name": "Mobile phones",
+     "bins": [
+      {
+       "code": "council-drop",
+       "label": "Council drop off points",
+       "tone": "blue",
+       "description": "Council drop-off locations such as community recycling hubs."
+      },
+      {
+       "code": "public-drop",
+       "label": "Public drop off points",
+       "tone": "blue",
+       "description": "Container refund points, participating retailers, pharmacies and similar public drop-off locations."
+      },
+      {
+       "code": "rrc-yellow",
+       "label": "Resource recovery centre, yellow line",
+       "tone": "yellow",
+       "description": "Council resource recovery centre: recyclables accepted at the yellow lines, usually free."
+      }
+     ],
+     "note": "Drop off mobile phones for free at any Council library, Council's community recycling hubs, other participating mobile stores. Council's resource recovery centres accept this item for free at the recycling facility, follow the yellow lines for correct disposal on site. Please ensure to delete sensitive data and personal information prior to recycling.",
+     "url": "https://www.brisbane.qld.gov.au/bins-waste-and-recycling/waste-and-recycling-facilities/community-recycling-hubs"
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"Mobile phones\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1144,
+    "completionTokens": 96,
+    "costUsd": 0.0004296
+   },
+   "trace": {
+    "expansions": [
+     "smartphone",
+     "cell phone",
+     "mobile phone"
+    ],
+    "candidates": [
+     {
+      "id": "bne-165",
+      "name": "Mobile phones",
+      "score": 10.25
+     },
+     {
+      "id": "bne-191",
+      "name": "Phone books",
+      "score": 6.8
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-165",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-165",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"mobile\", \"phone\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Public drop off points",
+   "binCode": "public-drop",
+   "why": "E-waste like old phones can be dropped at e-recycling points.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 333,
+    "completionTokens": 30,
+    "costUsd": 0.0001269
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|kitchen sponge": {
+  "answer": {
+   "status": "not_covered",
+   "city": "brisbane",
+   "query": "kitchen sponge",
+   "entries": [],
+   "closest": [
+    {
+     "id": "bne-220",
+     "name": "Rubber, rubber gloves, rubber bands"
+    },
+    {
+     "id": "bne-219",
+     "name": "Rubber matting"
+    },
+    {
+     "id": "bne-88",
+     "name": "Dry cleaning solvents"
+    }
+   ],
+   "reason": "No entry in Brisbane City Council's official list names \"kitchen sponge\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 3,
+    "promptTokens": 1083,
+    "completionTokens": 86,
+    "costUsd": 0.0004023
+   },
+   "trace": {
+    "expansions": [
+     "sponge",
+     "cleaning sponge",
+     "dish sponge",
+     "scrubber",
+     "washing sponge"
+    ],
+    "candidates": [
+     {
+      "id": "bne-220",
+      "name": "Rubber, rubber gloves, rubber bands",
+      "score": 4.14
+     },
+     {
+      "id": "bne-219",
+      "name": "Rubber matting",
+      "score": 3.12
+     },
+     {
+      "id": "bne-88",
+      "name": "Dry cleaning solvents",
+      "score": 2.86
+     },
+     {
+      "id": "bne-178",
+      "name": "Oven dishes (poor condition)",
+      "score": 2.65
+     },
+     {
+      "id": "bne-179",
+      "name": "Oven dishes (good condition)",
+      "score": 2.65
+     },
+     {
+      "id": "bne-280",
+      "name": "White goods (fridge, freezers, washing machines, clothes dryers)",
+      "score": 2.25
+     },
+     {
+      "id": "bne-201",
+      "name": "Plastic bottles (cleaning bottles, clear bottles and jars, opaque milk bottle, and shampoo bottles)",
+      "score": 1.65
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": null,
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-220",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "model pick",
+      "passed": false,
+      "detail": "the model found no entry that names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Red bin",
+   "binCode": "red-bin",
+   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in general waste.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 333,
+    "completionTokens": 30,
+    "costUsd": 0.0001269
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "brisbane|bicycle helmet": {
+  "answer": {
+   "status": "not_covered",
+   "city": "brisbane",
+   "query": "bicycle helmet",
+   "entries": [],
+   "closest": [
+    {
+     "id": "bne-26",
+     "name": "Bicycles"
+    },
+    {
+     "id": "bne-25",
+     "name": "Bicycle tyres and tubes"
+    },
+    {
+     "id": "bne-31",
+     "name": "Boots (safety)"
+    }
+   ],
+   "reason": "The match for \"bicycle helmet\" was not stable, so I will not guess. Check with Brisbane City Council.",
+   "mode": "llm",
+   "usage": {
+    "calls": 3,
+    "promptTokens": 959,
+    "completionTokens": 92,
+    "costUsd": 0.0003705
+   },
+   "trace": {
+    "expansions": [
+     "helmet",
+     "safety helmet",
+     "protective headgear",
+     "head protection"
+    ],
+    "candidates": [
+     {
+      "id": "bne-26",
+      "name": "Bicycles",
+      "score": 7.71
+     },
+     {
+      "id": "bne-25",
+      "name": "Bicycle tyres and tubes",
+      "score": 6.24
+     },
+     {
+      "id": "bne-31",
+      "name": "Boots (safety)",
+      "score": 3.45
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "bne-31",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "bne-26",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": false,
+      "detail": "the orderings disagree"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Red bin",
+   "binCode": "red-bin",
+   "why": "Brisbane does not accept helmets in recycling; dispose of broken/used helmets in general waste.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 333,
+    "completionTokens": 35,
+    "costUsd": 0.00013139999999999997
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "toronto|pizza box": {
+  "answer": {
+   "status": "answer",
+   "city": "toronto",
+   "query": "pizza box",
+   "entries": [
+    {
+     "id": "tor-A1461",
+     "name": "pizza boxes (food-soiled)",
+     "bins": [
+      {
+       "code": "green-bin",
+       "label": "Green Bin",
+       "tone": "green",
+       "description": "Organics (Green Bin)."
+      }
+     ],
+     "note": "Remove any plastic pieces and place those in the Garbage Bin. Place this item in the Green Bin.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"pizza boxes (food-soiled)\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1455,
+    "completionTokens": 101,
+    "costUsd": 0.0005273999999999999
+   },
+   "trace": {
+    "expansions": [
+     "pizza box",
+     "cardboard pizza container",
+     "takeout pizza box",
+     "food delivery box",
+     "pizza packaging"
+    ],
+    "candidates": [
+     {
+      "id": "tor-A1461",
+      "name": "pizza boxes (food-soiled)",
+      "score": 12.62
+     },
+     {
+      "id": "tor-A0138",
+      "name": "pizza boxes (unsoiled)",
+      "score": 11.46
+     },
+     {
+      "id": "tor-A1460",
+      "name": "pizza",
+      "score": 8.67
+     },
+     {
+      "id": "tor-A1389",
+      "name": "paper takeout fries boxes (food soiled)",
+      "score": 7.84
+     },
+     {
+      "id": "tor-A1441",
+      "name": "paper takeout burger boxes (food-soiled)",
+      "score": 7.84
+     },
+     {
+      "id": "tor-A0025",
+      "name": "cardboard boxes (unwaxed)",
+      "score": 7.33
+     },
+     {
+      "id": "tor-A1038",
+      "name": "cardboard boxes (waxed)",
+      "score": 7.33
+     },
+     {
+      "id": "tor-A0766",
+      "name": "frozen food box",
+      "score": 7
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "tor-A1461",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "tor-A0138",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"pizza\", \"box\", \"food\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Garbage Bin",
+   "binCode": "garbage",
+   "why": "Pizza boxes soiled with food/grease go in garbage; clean cardboard can be recycled.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 300,
+    "completionTokens": 34,
+    "costUsd": 0.00012059999999999999
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "toronto|plastic straw": {
+  "answer": {
+   "status": "answer",
+   "city": "toronto",
+   "query": "plastic straw",
+   "entries": [
+    {
+     "id": "tor-A0919",
+     "name": "plastic straw",
+     "bins": [
+      {
+       "code": "garbage",
+       "label": "Garbage Bin",
+       "tone": "grey",
+       "description": "Garbage (landfill)."
+      }
+     ],
+     "note": "Place this item in the Garbage Bin.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"plastic straw\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1408,
+    "completionTokens": 81,
+    "costUsd": 0.0004953
+   },
+   "trace": {
+    "expansions": [
+     "straw",
+     "drinking straw",
+     "sipping tube",
+     "beverage stirrer"
+    ],
+    "candidates": [
+     {
+      "id": "tor-A0919",
+      "name": "plastic straw",
+      "score": 10.92
+     },
+     {
+      "id": "tor-A0344",
+      "name": "paper straw (with wax",
+      "score": 8.33
+     },
+     {
+      "id": "tor-A1442",
+      "name": "paper straw (without wax",
+      "score": 7.78
+     },
+     {
+      "id": "tor-A2094",
+      "name": "straw bales",
+      "score": 7.52
+     },
+     {
+      "id": "tor-A0167",
+      "name": "plastic beverage containers",
+      "score": 6.59
+     },
+     {
+      "id": "tor-A0901",
+      "name": "plastic lotion tube",
+      "score": 5.59
+     },
+     {
+      "id": "tor-A0902",
+      "name": "plastic makeup tube",
+      "score": 5.59
+     },
+     {
+      "id": "tor-A0914",
+      "name": "plastic shampoo tube",
+      "score": 5.59
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "tor-A0919",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "tor-A0919",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"plastic\", \"straw\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Garbage Bin",
+   "binCode": "garbage",
+   "why": "Plastic straws are too small and lightweight for recycling; they go in landfill.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 299,
+    "completionTokens": 32,
+    "costUsd": 0.0001185
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "toronto|kitchen sponge": {
+  "answer": {
+   "status": "answer",
+   "city": "toronto",
+   "query": "kitchen sponge",
+   "entries": [
+    {
+     "id": "tor-A0978",
+     "name": "sponge",
+     "bins": [
+      {
+       "code": "garbage",
+       "label": "Garbage Bin",
+       "tone": "grey",
+       "description": "Garbage (landfill)."
+      }
+     ],
+     "note": "Place this item in the Garbage Bin.",
+     "url": null
+    }
+   ],
+   "closest": [],
+   "reason": "Matched the official entry \"sponge\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 4,
+    "promptTokens": 1318,
+    "completionTokens": 101,
+    "costUsd": 0.0004863
+   },
+   "trace": {
+    "expansions": [
+     "sponge",
+     "cleaning sponge",
+     "dish sponge",
+     "scrubber",
+     "washing sponge"
+    ],
+    "candidates": [
+     {
+      "id": "tor-A2143",
+      "name": "cellulose sponge",
+      "score": 9.23
+     },
+     {
+      "id": "tor-A0978",
+      "name": "sponge",
+      "score": 8.96
+     },
+     {
+      "id": "tor-A0409",
+      "name": "kitchen cabinet",
+      "score": 7.52
+     },
+     {
+      "id": "tor-A0410",
+      "name": "kitchen cupboards",
+      "score": 7.52
+     },
+     {
+      "id": "tor-A0813",
+      "name": "kitchen scale",
+      "score": 7.52
+     },
+     {
+      "id": "tor-A1160",
+      "name": "kitchen utensil",
+      "score": 7.52
+     },
+     {
+      "id": "tor-A2150",
+      "name": "loofah",
+      "score": 7.02
+     },
+     {
+      "id": "tor-A0936",
+      "name": "pot scrubber",
+      "score": 4.61
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": "tor-A0978",
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": "tor-A0978",
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "agreement",
+      "passed": true,
+      "detail": "2 of 2 orderings agree"
+     },
+     {
+      "name": "word evidence",
+      "passed": true,
+      "detail": "shares \"sponge\""
+     },
+     {
+      "name": "verification",
+      "passed": true,
+      "detail": "a separate yes/no check confirms the entry names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Garbage Bin",
+   "binCode": "garbage",
+   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in regular trash.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 300,
+    "completionTokens": 31,
+    "costUsd": 0.0001179
+   }
+  },
+  "computed": "2026-10-14"
+ },
+ "toronto|tea strainer": {
+  "answer": {
+   "status": "not_covered",
+   "city": "toronto",
+   "query": "tea strainer",
+   "entries": [],
+   "closest": [
+    {
+     "id": "tor-A1872",
+     "name": "tent trailer"
+    },
+    {
+     "id": "tor-A1504",
+     "name": "tea"
+    },
+    {
+     "id": "tor-A1506",
+     "name": "tea leaves"
+    }
+   ],
+   "reason": "No entry in City of Toronto's official list names \"tea strainer\".",
+   "mode": "llm",
+   "usage": {
+    "calls": 3,
+    "promptTokens": 1105,
+    "completionTokens": 88,
+    "costUsd": 0.00041069999999999995
+   },
+   "trace": {
+    "expansions": [
+     "tea infuser",
+     "tea ball",
+     "tea filter",
+     "tea sock",
+     "strainer spoon"
+    ],
+    "candidates": [
+     {
+      "id": "tor-A1872",
+      "name": "tent trailer",
+      "score": 8.68
+     },
+     {
+      "id": "tor-A1504",
+      "name": "tea",
+      "score": 7.79
+     },
+     {
+      "id": "tor-A1506",
+      "name": "tea leaves",
+      "score": 6.73
+     },
+     {
+      "id": "tor-A0857",
+      "name": "nylon tea bags",
+      "score": 6.07
+     },
+     {
+      "id": "tor-A0968",
+      "name": "silk tea bags",
+      "score": 6.07
+     },
+     {
+      "id": "tor-A1016",
+      "name": "tea bag wrappers",
+      "score": 6.07
+     },
+     {
+      "id": "tor-A1418",
+      "name": "loose leaf tea",
+      "score": 6.07
+     },
+     {
+      "id": "tor-A1505",
+      "name": "paper tea bags",
+      "score": 6.07
+     }
+    ],
+    "votes": [
+     {
+      "order": "by relevance",
+      "pick": null,
+      "variantStated": false
+     },
+     {
+      "order": "reversed",
+      "pick": null,
+      "variantStated": false
+     }
+    ],
+    "gates": [
+     {
+      "name": "model pick",
+      "passed": false,
+      "detail": "the model found no entry that names this item"
+     }
+    ]
+   }
+  },
+  "baseline": {
+   "bin": "Garbage Bin",
+   "binCode": "garbage",
+   "why": "Tea strainers are typically made of mixed materials and not recyclable; dispose in regular trash.",
+   "usage": {
+    "calls": 1,
+    "promptTokens": 300,
+    "completionTokens": 35,
+    "costUsd": 0.0001215
+   }
+  },
+  "computed": "2026-10-14"
+ }
+}
