@@ -124,7 +124,14 @@ function notCovered(city: CityId, query: string, hits: Hit[], reason: string, us
     city,
     query,
     entries: [],
-    closest: hits.slice(0, 3).map((h) => ({ id: h.entry.id, name: h.entry.name })),
+    // Only entries that share a word with what the resident wrote. Words the model added do not count.
+    closest: hits
+      .filter((h) => {
+        const q = new Set(tokens(query));
+        return [h.entry.name, ...h.entry.aliases].some((n) => tokens(n).some((t) => q.has(t)));
+      })
+      .slice(0, 3)
+      .map((h) => ({ id: h.entry.id, name: h.entry.name })),
     reason,
     mode,
     usage,

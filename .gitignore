@@ -12,3 +12,5 @@ next-env.d.ts
 .claude/
 _tmp/
 eval/results/scratch-*
+
+.vercel

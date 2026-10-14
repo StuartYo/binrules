@@ -31,9 +31,9 @@
    "mode": "llm",
    "usage": {
     "calls": 4,
-    "promptTokens": 1371,
-    "completionTokens": 101,
-    "costUsd": 0.0005022
+    "promptTokens": 1375,
+    "completionTokens": 99,
+    "costUsd": 0.0005016
    },
    "trace": {
     "expansions": [
@@ -41,7 +41,7 @@
      "cardboard pizza container",
      "takeout pizza box",
      "food delivery box",
-     "corrugated pizza tray"
+     "pizza packaging"
     ],
     "candidates": [
      {
@@ -165,7 +165,7 @@
      "teabag",
      "tea sachet",
      "herbal tea bag",
-     "loose leaf tea bag"
+     "loose leaf tea pouch"
     ],
     "candidates": [
      {
@@ -279,17 +279,16 @@
    "mode": "llm",
    "usage": {
     "calls": 4,
-    "promptTokens": 1308,
-    "completionTokens": 82,
-    "costUsd": 0.0004662
+    "promptTokens": 1280,
+    "completionTokens": 79,
+    "costUsd": 0.00045509999999999995
    },
    "trace": {
     "expansions": [
      "paper card",
      "visiting card",
      "calling card",
-     "name card",
-     "contact card"
+     "name card"
     ],
     "candidates": [
      {
@@ -313,11 +312,6 @@
       "score": 3.82
      },
      {
-      "id": "bne-75",
-      "name": "Contact lens (contact lenses, plastic film and pods)",
-      "score": 3.56
-     },
-     {
       "id": "bne-40",
       "name": "Butchers paper",
       "score": 3.48
@@ -330,6 +324,11 @@
      {
       "id": "bne-84",
       "name": "Disposable paper plates",
+      "score": 3.19
+     },
+     {
+      "id": "bne-259",
+      "name": "Toilet paper rolls",
       "score": 3.19
      }
     ],
@@ -497,12 +496,12 @@
   "baseline": {
    "bin": "Yellow bin",
    "binCode": "yellow-bin",
-   "why": "Milk cartons are recyclable in Brisbane’s yellow-lid recycling bin.",
+   "why": "Milk cartons are recyclable in Brisbane’s yellow-lid kerbside recycling bin.",
    "usage": {
     "calls": 1,
     "promptTokens": 333,
-    "completionTokens": 30,
-    "costUsd": 0.0001269
+    "completionTokens": 33,
+    "costUsd": 0.0001296
    }
   },
   "computed": "2026-10-14"
@@ -513,20 +512,7 @@
    "city": "brisbane",
    "query": "kitchen sponge",
    "entries": [],
-   "closest": [
-    {
-     "id": "bne-220",
-     "name": "Rubber, rubber gloves, rubber bands"
-    },
-    {
-     "id": "bne-219",
-     "name": "Rubber matting"
-    },
-    {
-     "id": "bne-88",
-     "name": "Dry cleaning solvents"
-    }
-   ],
+   "closest": [],
    "reason": "No entry in Brisbane City Council's official list names \"kitchen sponge\".",
    "mode": "llm",
    "usage": {
@@ -604,12 +590,12 @@
   "baseline": {
    "bin": "Red bin",
    "binCode": "red-bin",
-   "why": "Kitchen sponges are non-recyclable and go in general waste.",
+   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in general waste.",
    "usage": {
     "calls": 1,
     "promptTokens": 333,
-    "completionTokens": 28,
-    "costUsd": 0.0001251
+    "completionTokens": 30,
+    "costUsd": 0.0001269
    }
   },
   "computed": "2026-10-14"
@@ -628,10 +614,6 @@
     {
      "id": "bne-25",
      "name": "Bicycle tyres and tubes"
-    },
-    {
-     "id": "bne-31",
-     "name": "Boots (safety)"
     }
    ],
    "reason": "The match for \"bicycle helmet\" was not stable, so I will not guess. Check with Brisbane City Council.",
@@ -639,8 +621,8 @@
    "usage": {
     "calls": 3,
     "promptTokens": 959,
-    "completionTokens": 92,
-    "costUsd": 0.0003705
+    "completionTokens": 91,
+    "costUsd": 0.0003696
    },
    "trace": {
     "expansions": [
@@ -828,12 +810,12 @@
   "baseline": {
    "bin": "Garbage Bin",
    "binCode": "garbage",
-   "why": "Pizza boxes soiled with grease/food go to landfill; clean cardboard can be recycled.",
+   "why": "Pizza boxes soiled with food/grease go in garbage; clean cardboard can be recycled.",
    "usage": {
     "calls": 1,
     "promptTokens": 300,
-    "completionTokens": 35,
-    "costUsd": 0.0001215
+    "completionTokens": 34,
+    "costUsd": 0.00012059999999999999
    }
   },
   "computed": "2026-10-14"
@@ -1075,12 +1057,12 @@
   "baseline": {
    "bin": "Garbage Bin",
    "binCode": "garbage",
-   "why": "Kitchen sponges are non-recyclable and go in regular trash.",
+   "why": "Kitchen sponges are non-recyclable and contaminated; dispose in regular trash.",
    "usage": {
     "calls": 1,
     "promptTokens": 300,
-    "completionTokens": 29,
-    "costUsd": 0.00011609999999999999
+    "completionTokens": 31,
+    "costUsd": 0.0001179
    }
   },
   "computed": "2026-10-14"
@@ -1093,8 +1075,8 @@
    "entries": [],
    "closest": [
     {
-     "id": "tor-A1872",
-     "name": "tent trailer"
+     "id": "tor-A0345",
+     "name": "tea light holders (aluminum or other material))"
     },
     {
      "id": "tor-A1504",
@@ -1110,22 +1092,27 @@
    "usage": {
     "calls": 3,
     "promptTokens": 1105,
-    "completionTokens": 79,
-    "costUsd": 0.00040260000000000003
+    "completionTokens": 90,
+    "costUsd": 0.0004125
    },
    "trace": {
     "expansions": [
      "tea infuser",
-     "strainer ball",
      "tea ball",
-     "brew basket",
-     "mesh filter"
+     "tea filter",
+     "strainer spoon",
+     "mesh tea holder"
     ],
     "candidates": [
      {
       "id": "tor-A1872",
       "name": "tent trailer",
       "score": 8.68
+     },
+     {
+      "id": "tor-A0345",
+      "name": "tea light holders (aluminum or other material))",
+      "score": 7.83
      },
      {
       "id": "tor-A1504",
@@ -1155,11 +1142,6 @@
      {
       "id": "tor-A1418",
       "name": "loose leaf tea",
-      "score": 6.07
-     },
-     {
-      "id": "tor-A1505",
-      "name": "paper tea bags",
       "score": 6.07
      }
     ],

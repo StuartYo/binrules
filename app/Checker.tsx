@@ -259,6 +259,7 @@ export default function Checker({ cities }: { cities: CityInfo[] }) {
               <>
                 <p className="why">{a.reason}</p>
                 <p style={{ margin: "0 0 4px", fontWeight: 600 }}>I will not guess. Ask {info.councilName}.</p>
+                {a.closest.length === 0 && a.mode === "llm" && <p className="nosrc">Nothing in the list shares a word with your item.</p>}
                 {a.closest.length > 0 && (
                   <div className="closest">
                     <span className="nosrc">Nearest entries in the list. These are not a match for your item:</span>
