@@ -81,6 +81,14 @@
    "calls": 1911,
    "promptTokens": 631109,
    "completionTokens": 47146
+  },
+  {
+   "ts": "2026-10-14T03:51:50.348Z",
+   "label": "final-toronto-test",
+   "usd": 0.114282,
+   "calls": 950,
+   "promptTokens": 310874,
+   "completionTokens": 23355
   }
  ]
 }

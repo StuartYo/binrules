@@ -36,7 +36,7 @@ function readJson<T>(file: string): T {
 
 export function casesHash(city: CityId): string {
   const h = createHash("sha256");
-  for (const f of fs.readdirSync(DIR).filter((f) => f.startsWith(city + ".")).sort()) h.update(f).update(fs.readFileSync(path.join(DIR, f)));
+  for (const f of fs.readdirSync(DIR).filter((f) => f.startsWith(city + ".")).sort()) h.update(f).update(fs.readFileSync(path.join(DIR, f), "utf8").replace(/\r\n/g, "\n"));
   return h.digest("hex");
 }
 

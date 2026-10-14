@@ -1,8 +1,10 @@
-import { judge, wilson, type Outcome, type Row, type System } from "./judge";
+import { binMatch, judge, wilson, type Outcome, type Row, type System } from "./judge";
 
 export interface Cell {
   n: number;
   counts: Record<Outcome, number>;
+  /** In-scope sets: answers whose bin is one the official entry lists (looser than entry match). */
+  binOk: number;
   usd: number;
   calls: number;
 }
@@ -14,10 +16,11 @@ export function summarize(rows: Row[]): Summary {
   const s: Summary = {};
   for (const r of rows) {
     const key = `${r.city}/${r.set}`;
-    s[key] ??= { binrules: { n: 0, counts: zero(), usd: 0, calls: 0 }, model: { n: 0, counts: zero(), usd: 0, calls: 0 } };
+    s[key] ??= { binrules: { n: 0, counts: zero(), binOk: 0, usd: 0, calls: 0 }, model: { n: 0, counts: zero(), binOk: 0, usd: 0, calls: 0 } };
     const c = s[key][r.system];
     c.n++;
     c.counts[judge(r)]++;
+    if (binMatch(r)) c.binOk++;
     c.usd += r.usd;
     c.calls += r.calls;
   }

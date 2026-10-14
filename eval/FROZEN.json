@@ -3,10 +3,10 @@
  "cases": {
   "brisbane.heldout.json": "c748a23cfcf6d814dd886d4910421cbea5d5ee9caf1da7d23b610dd605b48ec5",
   "brisbane.messy.json": "2f9408f9adb41d091e299231c448797f9e76658c03881722504dd616124a4096",
-  "brisbane.oos.json": "5ee907dca0a275864eda2fd9218eed65bccf89e064ebb7c2da04d770872607f5",
-  "toronto.heldout.json": "134531d2201879afafd5c6d99b9f9af6e37a0aa437a616719db9899e9898bf89",
-  "toronto.messy.json": "d5bed448ad270b6a82c0fe390c3e9d23dc2f29b9f6d16094fcbc62505fb8b0f9",
-  "toronto.oos.json": "8bfe403d840854853e4164f6198a38c106acb5d59f2c80f707d01f618788e56c"
+  "brisbane.oos.json": "688294080d3a71907ac8006bbbcc3ea07df0a4507590f29af07ab6ee1a785ce0",
+  "toronto.heldout.json": "8f2e9c6572e97c217fad62ad384b27b4eab9ee1d4776dcc655c7b879f49c3fdb",
+  "toronto.messy.json": "85005153792df272a3725bfb5851d749e4d71594727636d38db3368df4d530f8",
+  "toronto.oos.json": "6a76634e0e288504137ecef2e93357608a4d8af9e780bd990745077cf17eb6af"
  },
  "baselineSha256": "4488be762e3c717d561393ed8b555a9c6b4612c79e4a55238dfa3ce88f93a1ce"
 }

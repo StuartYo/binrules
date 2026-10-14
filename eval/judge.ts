@@ -50,6 +50,16 @@ export function judge(r: Row): Outcome {
   return (r.officialBins ?? []).includes(r.binCode) ? "answered_right_bin" : "answered_wrong_bin";
 }
 
+/** In-scope rows only: is the bin the system gave one the official entry lists? Same rule for both systems. */
+export function binMatch(r: Row): boolean {
+  if (r.set !== "official" && r.set !== "messy") return false;
+  if (r.system === "binrules") {
+    if (!r.entries?.length) return false;
+    return (r.entryBins ?? []).length > 0 && (r.entryBins ?? []).every((b) => r.acceptBins.includes(b));
+  }
+  return !!r.binCode && r.acceptBins.includes(r.binCode);
+}
+
 /** Wilson score interval, 95%. */
 export function wilson(k: number, n: number): [number, number] {
   if (n === 0) return [0, 0];
