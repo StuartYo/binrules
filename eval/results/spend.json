@@ -57,6 +57,30 @@
    "calls": 621,
    "promptTokens": 202433,
    "completionTokens": 14147
+  },
+  {
+   "ts": "2026-10-14T03:36:32.634Z",
+   "label": "final-brisbane-test",
+   "usd": 0.232983,
+   "calls": 1920,
+   "promptTokens": 634892,
+   "completionTokens": 47239
+  },
+  {
+   "ts": "2026-10-14T03:39:19.913Z",
+   "label": "dev-6-after-stopword-fix",
+   "usd": 0.073276,
+   "calls": 619,
+   "promptTokens": 201778,
+   "completionTokens": 14159
+  },
+  {
+   "ts": "2026-10-14T03:45:09.231Z",
+   "label": "final-brisbane-test-rerun",
+   "usd": 0.231764,
+   "calls": 1911,
+   "promptTokens": 631109,
+   "completionTokens": 47146
   }
  ]
 }

@@ -1,0 +1,372 @@
+{
+ "_about": "Paraphrased and messy ways a resident might name an item that Toronto's Waste Wizard list names. Written by hand after the engine configuration was frozen and before any Toronto run. Same fields as the Brisbane file.",
+ "cases": [
+  {
+   "q": "greasy pizza box",
+   "accept": [
+    "tor-A1461",
+    "tor-A0138"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "pizza box",
+   "accept": [
+    "tor-A0138",
+    "tor-A1461"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "empty jar of baby food",
+   "accept": [
+    "tor-A0012"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "empty plastic laundry jug",
+   "accept": [
+    "tor-A0166"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "Pringles tube",
+   "accept": [
+    "tor-A0221"
+   ],
+   "kind": "brand",
+   "split": "test"
+  },
+  {
+   "q": "gift box from a department store",
+   "accept": [
+    "tor-A0321"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "old smartphone",
+   "accept": [
+    "tor-A0479"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "surge protector power strip",
+   "accept": [
+    "tor-A0501"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "plastic rings from a six pack of cans",
+   "accept": [
+    "tor-A0600",
+    "tor-A0599"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "old cassettes",
+   "accept": [
+    "tor-A0611"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "chopsticks from the sushi place",
+   "accept": [
+    "tor-A0666",
+    "tor-A1047"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "expired visa card",
+   "accept": [
+    "tor-A0699",
+    "tor-A0897"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "heating pad",
+   "accept": [
+    "tor-A0732"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "hose for the garden",
+   "accept": [
+    "tor-A0776"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "muesli bar wrapper",
+   "accept": [
+    "tor-A0787"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "pouch from my kid's juice drink",
+   "accept": [
+    "tor-A0809"
+   ],
+   "kind": "brand",
+   "split": "test"
+  },
+  {
+   "q": "coffee capsules for my Nespresso",
+   "accept": [
+    "tor-A0853",
+    "tor-A0684"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "drinking straws made of plastic",
+   "accept": [
+    "tor-A0919"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "cotton buds for cleaning ears",
+   "accept": [
+    "tor-A0941",
+    "tor-A0698",
+    "tor-A0730"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "bag from my hoover",
+   "accept": [
+    "tor-A1018"
+   ],
+   "kind": "colloquial",
+   "split": "test"
+  },
+  {
+   "q": "wet wipes sachet",
+   "accept": [
+    "tor-A1040",
+    "tor-A1041"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "ring binder",
+   "accept": [
+    "tor-A1073"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "glass tumblers",
+   "accept": [
+    "tor-A1118"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "lifejacket for kayaking",
+   "accept": [
+    "tor-A1163"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "wooden pencil stubs",
+   "accept": [
+    "tor-A1185"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "torn tea towels used as rags",
+   "accept": [
+    "tor-A1208"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "broken umbrella",
+   "accept": [
+    "tor-A1252"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "sticking plasters",
+   "accept": [
+    "tor-A1275"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "stale loaf of bread",
+   "accept": [
+    "tor-A1319"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "leftover crab legs",
+   "accept": [
+    "tor-A1352",
+    "tor-A1484"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "kitchen scraps",
+   "accept": [
+    "tor-A1385"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "used loose tea",
+   "accept": [
+    "tor-A1418",
+    "tor-A1506"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "dog rawhide bone",
+   "accept": [
+    "tor-A1473"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "jug of liquid bleach under the sink",
+   "accept": [
+    "tor-A1561"
+   ],
+   "kind": "brand",
+   "split": "test"
+  },
+  {
+   "q": "D cell batteries",
+   "accept": [
+    "tor-A1572",
+    "tor-A1616"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "bottle of white glue",
+   "accept": [
+    "tor-A1605"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "expired prescription pills",
+   "accept": [
+    "tor-A1737"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "old vitamin tablets",
+   "accept": [
+    "tor-A1748"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "old kitchen range",
+   "accept": [
+    "tor-A1814"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "fibreglass canoe from the cottage",
+   "accept": [
+    "tor-A1825"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "upright piano",
+   "accept": [
+    "tor-A1880"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "set of golf clubs",
+   "accept": [
+    "tor-A1924"
+   ],
+   "kind": "descriptive",
+   "split": "test"
+  },
+  {
+   "q": "memory foam mattress pad",
+   "accept": [
+    "tor-A1968"
+   ],
+   "kind": "synonym",
+   "split": "test"
+  },
+  {
+   "q": "paper cup from Tim Hortons",
+   "accept": [
+    "tor-A0870",
+    "tor-A0711",
+    "tor-A0994",
+    "tor-A0983"
+   ],
+   "kind": "brand",
+   "split": "test"
+  }
+ ]
+}

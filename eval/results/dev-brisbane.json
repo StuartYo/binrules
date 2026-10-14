@@ -1,6 +1,6 @@
 {
  "meta": {
-  "label": "dev-5-equiv",
+  "label": "dev-6-after-stopword-fix",
   "city": "brisbane",
   "split": "dev",
   "sets": [
@@ -17,16 +17,16 @@
   "votes": 2,
   "k": 14,
   "verify": true,
-  "createdAt": "2026-10-14T03:30:41.883Z",
-  "configHash": "eab5371f0701a6a730d3bc9defd10c0017902d2594bc2d55aa3597fd8089e81e",
+  "createdAt": "2026-10-14T03:39:19.913Z",
+  "configHash": "ec16507d4f6b9e73d42664a44ca74dab02d348fb61b2413210df35eff9467922",
   "casesHash": "1a6249cc7c152ddd3192cd845e380879c0e4834f5fbb091f2a7fdcbd0de8af02",
-  "commit": "ff37701",
+  "commit": "8d271d5",
   "dirty": true,
   "dataModified": "2026-07-20T08:11:48+00:00",
-  "usd": 0.073462,
-  "calls": 621,
-  "promptTokens": 202433,
-  "completionTokens": 14147,
+  "usd": 0.073276,
+  "calls": 619,
+  "promptTokens": 201778,
+  "completionTokens": 14159,
   "errors": 0
  },
  "rows": [
@@ -43,7 +43,7 @@
     "yellow-bin"
    ],
    "intended": "bne-1",
-   "usd": 0.0004917,
+   "usd": 0.0004899,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -68,7 +68,7 @@
     "yellow-bin"
    ],
    "intended": "bne-3",
-   "usd": 0.0004904999999999999,
+   "usd": 0.000492,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -93,7 +93,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-6",
-   "usd": 0.0005013,
+   "usd": 0.0004959,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -221,7 +221,7 @@
     "rrc-red"
    ],
    "intended": "bne-22",
-   "usd": 0.0004883999999999999,
+   "usd": 0.0004911,
    "calls": 4,
    "status": "depends",
    "entries": [
@@ -300,7 +300,7 @@
     "red-bin"
    ],
    "intended": "bne-27",
-   "usd": 0.00048449999999999996,
+   "usd": 0.0005142,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -428,7 +428,7 @@
     "rrc-red"
    ],
    "intended": "bne-46",
-   "usd": 0.0004992,
+   "usd": 0.0005064,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -456,7 +456,7 @@
     "kerb-large"
    ],
    "intended": "bne-47",
-   "usd": 0.0004998,
+   "usd": 0.0005016,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -483,7 +483,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-55",
-   "usd": 0.0004977,
+   "usd": 0.0005055,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -508,7 +508,7 @@
     "red-bin"
    ],
    "intended": "bne-56",
-   "usd": 0.0004904999999999999,
+   "usd": 0.0004923,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -556,7 +556,7 @@
     "red-bin"
    ],
    "intended": "bne-60",
-   "usd": 0.0005193,
+   "usd": 0.0005147999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -628,7 +628,7 @@
     "red-bin"
    ],
    "intended": "bne-63",
-   "usd": 0.0005079,
+   "usd": 0.0005118000000000001,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -654,7 +654,7 @@
     "yellow-bin"
    ],
    "intended": "bne-69",
-   "usd": 0.0005316,
+   "usd": 0.0005352,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -678,7 +678,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-76",
-   "usd": 0.0005058,
+   "usd": 0.0005051999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -728,7 +728,7 @@
     "red-bin"
    ],
    "intended": "bne-79",
-   "usd": 0.00041699999999999994,
+   "usd": 0.00044009999999999996,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -850,7 +850,7 @@
     "rrc-red"
    ],
    "intended": "bne-98",
-   "usd": 0.0004316999999999999,
+   "usd": 0.0004347,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -926,7 +926,7 @@
     "yellow-bin"
    ],
    "intended": "bne-110",
-   "usd": 0.0005142,
+   "usd": 0.0005145,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -951,7 +951,7 @@
     "rrc-green"
    ],
    "intended": "bne-116",
-   "usd": 0.00047159999999999997,
+   "usd": 0.0004542,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1108,7 +1108,7 @@
     "haz-days"
    ],
    "intended": "bne-129",
-   "usd": 0.00043230000000000005,
+   "usd": 0.0004362,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1132,7 +1132,7 @@
     "red-bin"
    ],
    "intended": "bne-135",
-   "usd": 0.0005054999999999999,
+   "usd": 0.0005076,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1309,7 +1309,7 @@
     "red-bin"
    ],
    "intended": "bne-153",
-   "usd": 0.0004137,
+   "usd": 0.0004347,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1479,8 +1479,7 @@
    "accept": [
     "bne-173",
     "bne-174",
-    "bne-175",
-    "bne-176"
+    "bne-175"
    ],
    "acceptBins": [
     "rrc-yellow",
@@ -1541,7 +1540,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-179",
-   "usd": 0.0004925999999999999,
+   "usd": 0.0004953,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1617,7 +1616,7 @@
     "red-bin"
    ],
    "intended": "bne-189",
-   "usd": 0.000441,
+   "usd": 0.0004611,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1669,7 +1668,7 @@
     "rrc-red"
    ],
    "intended": "bne-194",
-   "usd": 0.0004917,
+   "usd": 0.0004953,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1694,7 +1693,7 @@
     "red-bin"
    ],
    "intended": "bne-196",
-   "usd": 0.0004374,
+   "usd": 0.00043289999999999995,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1743,7 +1742,7 @@
     "public-drop"
    ],
    "intended": "bne-202",
-   "usd": 0.0004961999999999999,
+   "usd": 0.0005015999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1794,7 +1793,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-207",
-   "usd": 0.00044429999999999996,
+   "usd": 0.00043259999999999994,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1870,7 +1869,7 @@
     "red-bin"
    ],
    "intended": "bne-212",
-   "usd": 0.0005145,
+   "usd": 0.0005118000000000001,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1894,7 +1893,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-213",
-   "usd": 0.0004479,
+   "usd": 0.00045149999999999997,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1918,7 +1917,7 @@
     "other"
    ],
    "intended": "bne-217",
-   "usd": 0.0004128,
+   "usd": 0.000411,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -1966,7 +1965,7 @@
     "red-bin"
    ],
    "intended": "bne-222",
-   "usd": 0.0004902,
+   "usd": 0.0004761,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2039,7 +2038,7 @@
     "red-bin"
    ],
    "intended": "bne-235",
-   "usd": 0.0005013,
+   "usd": 0.0005031,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2063,7 +2062,7 @@
     "yellow-bin"
    ],
    "intended": "bne-238",
-   "usd": 0.00042179999999999995,
+   "usd": 0.000492,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2087,7 +2086,7 @@
     "rrc-yellow"
    ],
    "intended": "bne-240",
-   "usd": 0.00048629999999999995,
+   "usd": 0.0005046,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2135,7 +2134,7 @@
     "red-bin"
    ],
    "intended": "bne-243",
-   "usd": 0.0004311,
+   "usd": 0.00043020000000000005,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2185,7 +2184,7 @@
     "red-bin"
    ],
    "intended": "bne-248",
-   "usd": 0.0005034,
+   "usd": 0.0004967999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2210,7 +2209,7 @@
     "yellow-bin"
    ],
    "intended": "bne-249",
-   "usd": 0.0005066999999999999,
+   "usd": 0.0005057999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2282,7 +2281,7 @@
     "other"
    ],
    "intended": "bne-264",
-   "usd": 0.00040469999999999997,
+   "usd": 0.0004755,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2386,7 +2385,7 @@
     "rrc-green"
    ],
    "intended": "bne-277",
-   "usd": 0.00043079999999999995,
+   "usd": 0.0004401,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2519,7 +2518,7 @@
     "yellow-bin"
    ],
    "intended": "bne-292",
-   "usd": 0.0005097,
+   "usd": 0.0005178,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2570,7 +2569,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-3",
-   "usd": 0.0005001000000000001,
+   "usd": 0.0005024999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2650,7 +2649,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-26",
-   "usd": 0.00045450000000000004,
+   "usd": 0.00045359999999999997,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2726,7 +2725,7 @@
    ],
    "kind": "synonym",
    "intended": "bne-58",
-   "usd": 0.0005028,
+   "usd": 0.000504,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2853,7 +2852,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-94",
-   "usd": 0.0005088,
+   "usd": 0.0005031,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2906,7 +2905,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-105",
-   "usd": 0.0004389,
+   "usd": 0.000438,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -2963,7 +2962,7 @@
    ],
    "kind": "synonym",
    "intended": "bne-123",
-   "usd": 0.0004659,
+   "usd": 0.00046409999999999995,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -2985,7 +2984,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-141",
-   "usd": 0.00043559999999999996,
+   "usd": 0.00043500000000000006,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3010,7 +3009,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-144",
-   "usd": 0.00043559999999999996,
+   "usd": 0.0004401,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3088,7 +3087,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-153",
-   "usd": 0.0004311,
+   "usd": 0.00043560000000000007,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3212,7 +3211,7 @@
    ],
    "kind": "synonym",
    "intended": "bne-203",
-   "usd": 0.0005258999999999999,
+   "usd": 0.0005195999999999999,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3237,7 +3236,7 @@
    ],
    "kind": "synonym",
    "intended": "bne-218",
-   "usd": 0.0004785,
+   "usd": 0.00047939999999999994,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3287,7 +3286,7 @@
    ],
    "kind": "brand",
    "intended": "bne-242",
-   "usd": 0.000465,
+   "usd": 0.0004686,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3338,7 +3337,7 @@
    ],
    "kind": "synonym",
    "intended": "bne-249",
-   "usd": 0.0005154,
+   "usd": 0.0005172,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3363,7 +3362,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-264",
-   "usd": 0.0004917,
+   "usd": 0.000489,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3414,7 +3413,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-273",
-   "usd": 0.00045959999999999995,
+   "usd": 0.0004614,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3485,7 +3484,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-255",
-   "usd": 0.0005070000000000001,
+   "usd": 0.0005106,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3511,7 +3510,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-202",
-   "usd": 0.0005078999999999999,
+   "usd": 0.0004335,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3538,7 +3537,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-189",
-   "usd": 0.00044970000000000003,
+   "usd": 0.00044790000000000005,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3566,12 +3565,17 @@
    ],
    "kind": "synonym",
    "intended": "bne-210",
-   "usd": 0.00036899999999999997,
-   "calls": 3,
-   "status": "not_covered",
-   "entries": [],
-   "entryBins": [],
-   "reason": "The match for \"inkjet cartridge\" was not stable, so I will not guess. Check with Brisbane City Council."
+   "usd": 0.00044130000000000005,
+   "calls": 4,
+   "status": "answer",
+   "entries": [
+    "bne-210"
+   ],
+   "entryBins": [
+    "public-drop",
+    "red-bin"
+   ],
+   "reason": "Matched the official entry \"Printer and ink cartridges\"."
   },
   {
    "set": "messy",
@@ -3587,7 +3591,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-235",
-   "usd": 0.0005216999999999999,
+   "usd": 0.0005139,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3612,7 +3616,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-56",
-   "usd": 0.0005139,
+   "usd": 0.0005184,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3637,7 +3641,7 @@
    ],
    "kind": "descriptive",
    "intended": "bne-61",
-   "usd": 0.0005016,
+   "usd": 0.0005007000000000001,
    "calls": 4,
    "status": "answer",
    "entries": [
@@ -3672,12 +3676,12 @@
    "accept": [],
    "acceptBins": [],
    "trap": "Rubber matting",
-   "usd": 0.0004746,
-   "calls": 4,
+   "usd": 0.0004035,
+   "calls": 3,
    "status": "not_covered",
    "entries": [],
    "entryBins": [],
-   "reason": "The closest entry, \"Carpet and rugs\", is related to \"bath mat\" but does not name it, so I will not guess."
+   "reason": "The match for \"bath mat\" was not stable, so I will not guess. Check with Brisbane City Council."
   },
   {
    "set": "oos",
@@ -3702,7 +3706,7 @@
    "system": "binrules",
    "accept": [],
    "acceptBins": [],
-   "usd": 0.00034889999999999997,
+   "usd": 0.0003633,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3717,7 +3721,7 @@
    "system": "binrules",
    "accept": [],
    "acceptBins": [],
-   "usd": 0.0003501,
+   "usd": 0.00034199999999999996,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3762,7 +3766,7 @@
    "system": "binrules",
    "accept": [],
    "acceptBins": [],
-   "usd": 0.0003588,
+   "usd": 0.0003597,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3792,7 +3796,7 @@
    "system": "binrules",
    "accept": [],
    "acceptBins": [],
-   "usd": 0.00036510000000000004,
+   "usd": 0.00035789999999999997,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3807,7 +3811,7 @@
    "system": "binrules",
    "accept": [],
    "acceptBins": [],
-   "usd": 0.0003612,
+   "usd": 0.0003702,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3823,7 +3827,7 @@
    "accept": [],
    "acceptBins": [],
    "trap": "instruction injection",
-   "usd": 0.00041279999999999995,
+   "usd": 0.0004182,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3855,12 +3859,12 @@
    "accept": [],
    "acceptBins": [],
    "trap": "not an item",
-   "usd": 0.0004236,
-   "calls": 3,
+   "usd": 0.0000465,
+   "calls": 1,
    "status": "not_covered",
    "entries": [],
    "entryBins": [],
-   "reason": "No entry in Brisbane City Council's official list names \"what's the weather today\"."
+   "reason": "No entry in Brisbane City Council's official list shares a word with \"what's the weather today\"."
   },
   {
    "set": "heldout",
@@ -3874,7 +3878,7 @@
     "red-bin"
    ],
    "intended": "bne-42",
-   "usd": 0.000363,
+   "usd": 0.0003594,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3894,7 +3898,7 @@
     "red-bin"
    ],
    "intended": "bne-77",
-   "usd": 0.0004359,
+   "usd": 0.0004395,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3913,7 +3917,7 @@
     "red-bin"
    ],
    "intended": "bne-196",
-   "usd": 0.0003564,
+   "usd": 0.0003581999999999999,
    "calls": 3,
    "status": "not_covered",
    "entries": [],
@@ -3932,7 +3936,7 @@
     "red-bin"
    ],
    "intended": "bne-265",
-   "usd": 0.0000651,
+   "usd": 0.000060599999999999996,
    "calls": 1,
    "status": "not_covered",
    "entries": [],
@@ -3989,7 +3993,7 @@
     "yellow-bin"
    ],
    "intended": "bne-238",
-   "usd": 0.0004317,
+   "usd": 0.00043079999999999995,
    "calls": 3,
    "status": "not_covered",
    "entries": [],

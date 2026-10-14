@@ -4,7 +4,7 @@ const STOP = new Set([
   "a", "an", "the", "of", "and", "or", "with", "for", "in", "on", "to", "from", "my", "your", "our", "that", "this",
   "these", "those", "some", "any", "it", "its", "is", "are", "was", "be", "been", "i", "me", "we", "used", "old",
   "bit", "piece", "pieces", "lot", "kind", "type", "like", "such", "as", "at", "by", "into", "out", "up", "got",
-  "has", "have", "had", "can", "do", "does", "not", "no", "dirty", "empty", "little", "small", "big", "large",
+  "has", "have", "had", "do", "does", "no", "dirty", "empty", "little", "small", "big", "large",
 ]);
 
 // British/American and common spelling variants, applied before stemming.

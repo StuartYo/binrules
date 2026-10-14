@@ -45,13 +45,27 @@ function jaccard(a: Set<string>, b: Set<string>): number {
   return inter / (a.size + b.size - inter || 1);
 }
 
+interface Sig {
+  id: string;
+  fk: string;
+  bt: Set<string>;
+}
+const sigCache = new Map<CityId, Sig[]>();
+function sigs(city: CityId): Sig[] {
+  let s = sigCache.get(city);
+  if (!s) {
+    s = getCity(city).entries.map((x) => ({ id: x.id, fk: familyKey(x.name), bt: new Set(tokens(baseName(x.name))) }));
+    sigCache.set(city, s);
+  }
+  return s;
+}
+
 /** Entries that are the same item as `e`: its condition variants and near-duplicate official entries. */
 export function sameItemIds(city: CityId, e: Entry): string[] {
-  const c = getCity(city);
   const fk = familyKey(e.name);
   const bt = new Set(tokens(baseName(e.name)));
-  return c.entries
-    .filter((x) => x.id === e.id || (fk && familyKey(x.name) === fk) || jaccard(bt, new Set(tokens(baseName(x.name)))) >= 0.6)
+  return sigs(city)
+    .filter((x) => x.id === e.id || (fk && x.fk === fk) || jaccard(bt, x.bt) >= 0.6)
     .map((x) => x.id);
 }
 
